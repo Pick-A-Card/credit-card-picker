@@ -51,7 +51,7 @@ Emails go out from a GitHub Action whenever the card data changes. It needs thre
 3. Delete the downloaded file afterwards. Keep this key private and never commit it.
 
 **B. A Gmail account to send from**
-You can use your own Gmail, or make a dedicated one such as `pickacard.updates@gmail.com`.
+Use a dedicated Gmail account for the app rather than your personal one, because subscribers see it as the sender.
 1. That Google account needs **2-Step Verification** turned on: <https://myaccount.google.com/security>.
 2. Create an **app password**: <https://myaccount.google.com/apppasswords> → name it `Pick-A-Card` → copy the 16-character password.
 3. Add two more GitHub secrets:

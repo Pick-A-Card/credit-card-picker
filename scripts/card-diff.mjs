@@ -55,6 +55,8 @@ function section(title, events) {
  * Build one person's email, or null if there is nothing for them.
  * @param {{ presetIds: string[], prefs: { emailMine?: boolean, emailAll?: boolean } }} person
  */
+const SUPPORT_URL = 'https://buymeacoffee.com/pickacard';
+
 export function buildEmail(events, person, appUrl) {
   const mine = new Set(person.presetIds || []);
   const yours = events.filter((e) => mine.has(e.presetId));
@@ -70,10 +72,10 @@ export function buildEmail(events, person, appUrl) {
   const subject = yourNames.length
     ? `Pick-A-Card: updates to ${yourNames.length === 1 ? yourNames[0] : `${yourNames.length} of your cards`}`
     : `Pick-A-Card: ${otherCount} card update${otherCount === 1 ? '' : 's'}`;
-  const footer = `Open Pick-A-Card: ${appUrl}\nChange or stop these emails: ${appUrl}?view=settings`;
+  const footer = `Open Pick-A-Card: ${appUrl}\nChange or stop these emails: ${appUrl}?view=settings\nEnjoying Pick-A-Card? Buy me a coffee: ${SUPPORT_URL}`;
   return {
     subject,
     text: `${parts.map((p) => p.text).join('\n')}\n${footer}\n`,
-    html: `${parts.map((p) => p.html).join('')}<hr><p style="color:#666;font-size:13px"><a href="${esc(appUrl)}">Open Pick-A-Card</a> · <a href="${esc(appUrl)}?view=settings">Change or stop these emails</a></p>`,
+    html: `${parts.map((p) => p.html).join('')}<hr><p style="color:#666;font-size:13px"><a href="${esc(appUrl)}">Open Pick-A-Card</a> · <a href="${esc(appUrl)}?view=settings">Change or stop these emails</a> · <a href="${SUPPORT_URL}">Buy me a coffee ☕</a></p>`,
   };
 }

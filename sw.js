@@ -1,7 +1,7 @@
 // Offline support. Network first so card-data and app updates show up as soon
 // as you open the app; falls back to the cached copy when offline.
 // Store lookups (Photon/Overpass/Nominatim) are cross-origin and always go to the network.
-const CACHE = 'pick-a-card-v8';
+const CACHE = 'pick-a-card-v9';
 const SHELL = [
   './', 'index.html', 'css/styles.css', 'manifest.webmanifest', 'data/cards.json',
   'js/app.js', 'js/data.js', 'js/engine.js', 'js/store.js', 'js/location.js', 'js/catalog.js', 'js/sync.js',

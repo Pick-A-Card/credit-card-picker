@@ -40,6 +40,11 @@ About widgets: a web app can't add a real Android home-screen widget. The launch
 - Cards you've edited yourself are never overwritten; you get "Use the update / Keep mine" instead.
 - When accounts are set up, subscribers get emails about these changes ([details](SETUP-ACCOUNTS.md)).
 
+## Support & contact
+
+Pick-A-Card is free, with no ads. If it's useful, you can [buy me a coffee ☕](https://buymeacoffee.com/pickacard).
+Questions, or a card that's wrong or missing: **pickacreditcard@gmail.com**
+
 ## Privacy
 
 Your cards, spending log and settings stay on your phone, or in your own Firebase account if you turn on sync. When you tap **What card here?**, only your location is sent, and only to these US/EU-based services:
