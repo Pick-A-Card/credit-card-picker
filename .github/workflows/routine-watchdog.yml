@@ -1,0 +1,33 @@
+name: Routine watchdog
+
+# The day after each scheduled card-data routine, checks that it sent a
+# report. If none came in, the routine crashed or never started, so this sends
+# a failure report instead.
+on:
+  schedule:
+    - cron: '47 13 17 * *'          # day after the monthly update (16th)
+    - cron: '47 13 2 1,4,7,10 *'    # day after the new-quarter check (1st)
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Look for a report from the last 36 hours
+        run: |
+          since=$(date -u -d '36 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+          count=$(gh run list --workflow routine-report.yml --limit 20 --json createdAt \
+            --jq "[.[] | select(.createdAt >= \"$since\")] | length")
+          echo "$count report(s) since $since"
+          if [ "$count" = 0 ]; then
+            gh workflow run routine-report.yml --ref "${{ github.event.repository.default_branch }}" \
+              -f task="Scheduled card-data routine" -f status=failure \
+              -f summary="No report came in from yesterday's scheduled routine, so it crashed or never started. Check the routine's session at claude.ai/code."
+            echo "::warning::No routine report found; sent a failure report."
+          fi

@@ -1,0 +1,50 @@
+name: Routine report
+run-name: "Routine report: ${{ inputs.status }} - ${{ inputs.task }}"
+
+# Emails the owner when a scheduled card-data routine finishes. The routine
+# starts this at the end of every run; routine-watchdog.yml starts it when a
+# routine never reported.
+on:
+  workflow_dispatch:
+    inputs:
+      task: { description: Which routine ran, required: true, default: Test }
+      status:
+        description: How it went
+        type: choice
+        options: [success, failure]
+        default: success
+      summary: { description: What changed or what went wrong, required: true, default: Test report. }
+
+permissions:
+  contents: read
+
+jobs:
+  email:
+    runs-on: ubuntu-latest
+    env:
+      REPORT_TO: pickacreditcard@gmail.com
+      GMAIL_USER: ${{ secrets.GMAIL_USER }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      TASK: ${{ inputs.task }}
+      STATUS: ${{ inputs.status }}
+      SUMMARY: ${{ inputs.summary }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save nodemailer@6
+      - name: Send report
+        run: |
+          node -e '
+            const { GMAIL_USER, GMAIL_APP_PASSWORD, REPORT_TO, TASK, STATUS, SUMMARY, RUN_URL } = process.env;
+            if (!GMAIL_USER || !GMAIL_APP_PASSWORD) { console.error("::error::GMAIL_USER / GMAIL_APP_PASSWORD secrets are not set"); process.exit(1); }
+            const ok = STATUS === "success";
+            const transport = require("nodemailer").createTransport({ service: "gmail", auth: { user: GMAIL_USER, pass: GMAIL_APP_PASSWORD } });
+            transport.sendMail({
+              from: `Pick-A-Card <${GMAIL_USER}>`,
+              to: REPORT_TO,
+              subject: `Pick-A-Card routine ${ok ? "succeeded" : "FAILED"}: ${TASK}`,
+              text: `${TASK}\nStatus: ${ok ? "Succeeded" : "Failed"}\n\n${SUMMARY}\n\n${RUN_URL}`,
+            }).then(() => console.log(`Report sent to ${REPORT_TO}.`), (e) => { console.error(`::error::${e.message}`); process.exit(1); });
+          '
