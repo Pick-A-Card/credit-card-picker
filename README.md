@@ -17,15 +17,29 @@ Other features:
 - **Accounts (optional).** Sign in to sync your cards across devices and get email updates. This needs a one-time setup: see [SETUP-ACCOUNTS.md](SETUP-ACCOUNTS.md).
 - Works offline except the store lookup. Without an account, everything stays on your device; use Export/Import in Settings for backups.
 
-## Install on Android
+## Install on your phone
 
-1. Open **https://manmeyco.github.io/credit-card-picker/** in **Chrome**.
+App link: **https://pick-a-card.github.io/credit-card-picker/**
+
+### iPhone / iPad
+
+1. Open the link in **Safari**.
+2. Tap the **Share** button (the square with an arrow, at the bottom or top of the screen).
+3. Scroll down and tap **Add to Home Screen**. If you see **Open as Web App**, leave it on.
+4. Tap **Add**, then open Pick-A-Card from your home screen.
+5. For **What card here?**, allow location when asked. If you said no before, go to **Settings → Privacy & Security → Location Services → Safari Websites → While Using the App**.
+
+### Android
+
+1. Open the link in **Chrome**.
 2. Tap **⋮ → Add to Home screen → Install**.
 3. *(Optional one-tap button)* Long-press the app icon and drag the **"What card here?"** shortcut onto your home screen.
 
-Then add your cards in **Wallet → ＋ Add cards**, and set what your points are worth in **Settings**. Tick **Activated** on rotating-category cards once you've activated the quarter with your bank.
+The same steps are in the app under **☰ → Settings → Install on your phone**.
 
-About widgets: a web app can't add a real Android home-screen widget. The launcher shortcut is the closest thing.
+Then add your cards with **☰ → ＋ Add cards**, and set what your points are worth in **☰ → Point values**. Tick **Activated** on rotating-category cards once you've activated the quarter with your bank.
+
+About widgets: a web app can't add a real home-screen widget. On Android, the launcher shortcut is the closest thing. iPhone doesn't support app shortcuts for web apps.
 
 ## How card data stays current
 
@@ -44,6 +58,10 @@ About widgets: a web app can't add a real Android home-screen widget. The launch
 
 Pick-A-Card is free, with no ads. If it's useful, you can [buy me a coffee ☕](https://buymeacoffee.com/pickacard).
 Questions, or a card that's wrong or missing: **pickacreditcard@gmail.com**
+
+## Disclaimer
+
+Pick-A-Card is an independent tool and isn't affiliated with, or endorsed by, any bank or card issuer. Recommendations are estimates based on published card terms, which change often and may be out of date or wrong. This isn't financial advice: confirm rates, caps and fees with your issuer before relying on them.
 
 ## Privacy
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Sends the app's real store-lookup request to each map service, the way Chrome
-# on Android at manmeyco.github.io would, and reports what comes back.
+# on Android at pick-a-card.github.io would, and reports what comes back.
 # Run by .github/workflows/check-maps.yml (Actions tab → Check map services).
 LAT=${LAT:-40.7505}; LON=${LON:--73.9934}
-ORIGIN=${ORIGIN:-https://manmeyco.github.io}
+ORIGIN=${ORIGIN:-https://pick-a-card.github.io}
 QUERY=$(node --input-type=module -e "import('./js/location.js').then(m => process.stdout.write(m.overpassQuery($LAT, $LON, 120)))")
 CHROME='Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36'
 

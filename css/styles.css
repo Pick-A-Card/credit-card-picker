@@ -199,3 +199,8 @@ dialog::backdrop { background: rgb(0 0 0 / 0.5); }
 .issuer-head { margin: 12px 0 2px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
 .preset.added { opacity: 0.55; }
 .email-signin { display: grid; gap: 8px; margin-top: 16px; }
+.install-help { margin: 6px 0; padding: 8px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+.install-help summary { cursor: pointer; font-weight: 600; }
+.install-help ol { margin: 8px 0 4px; padding-left: 20px; }
+.install-help li { margin: 4px 0; }
+.home-footer.disclaimer { margin-top: 4px; font-size: 0.75rem; }

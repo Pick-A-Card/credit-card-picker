@@ -14,7 +14,7 @@ import { categoryLabel } from '../js/data.js';
 const [oldPath, newPath] = process.argv.slice(2);
 const oldRaw = oldPath && existsSync(oldPath) ? JSON.parse(readFileSync(oldPath, 'utf8')) : { cards: [] };
 const newRaw = JSON.parse(readFileSync(newPath, 'utf8'));
-const appUrl = process.env.APP_URL || 'https://manmeyco.github.io/credit-card-picker/';
+const appUrl = process.env.APP_URL || 'https://pick-a-card.github.io/credit-card-picker/';
 
 if (process.env.TEST_EMAIL === 'true') {
   await sendTest();

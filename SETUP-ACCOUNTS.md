@@ -21,7 +21,7 @@ It uses **Firebase**, Google's free app backend. The free "Spark" plan is plenty
 2. On the **Sign-in method** tab:
    - **Google** → Enable → pick your email as the support email → **Save**.
    - **Email/Password** → Enable → **Save**. (The passwordless "Email link" option isn't needed.)
-3. On the **Settings** tab → **Authorized domains** → **Add domain** → `manmeyco.github.io`.
+3. On the **Settings** tab → **Authorized domains** → **Add domain** → `pick-a-card.github.io`.
 
 ## 3. Create the database
 
@@ -45,7 +45,7 @@ Emails go out from a GitHub Action whenever the card data changes. It needs thre
 
 **A. Firebase key (to read who's subscribed)**
 1. Firebase **Project settings → Service accounts → Generate new private key** → this downloads a `.json` file.
-2. On GitHub, open <https://github.com/Manmeyco/credit-card-picker/settings/secrets/actions> → **New repository secret**.
+2. On GitHub, open <https://github.com/Pick-A-Card/credit-card-picker/settings/secrets/actions> → **New repository secret**.
    - Name: `FIREBASE_SERVICE_ACCOUNT`
    - Value: the entire contents of that `.json` file.
 3. Delete the downloaded file afterwards. Keep this key private and never commit it.

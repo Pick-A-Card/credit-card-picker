@@ -27,7 +27,7 @@ test('email targeting lists preset ids', () => {
 
 test('account errors are explained, not guessed', async () => {
   const { describeAccountError } = await import('../js/cloud.js');
-  assert.match(describeAccountError({ code: 'auth/unauthorized-domain' }, { domain: 'manmeyco.github.io' }), /manmeyco\.github\.io isn't on Firebase's list of authorized domains/);
+  assert.match(describeAccountError({ code: 'auth/unauthorized-domain' }, { domain: 'pick-a-card.github.io' }), /pick-a-card\.github\.io isn't on Firebase's list of authorized domains/);
   assert.match(describeAccountError({ code: 'permission-denied' }), /security rules don't allow it/);
   assert.match(describeAccountError(new TypeError('Failed to fetch'), { online: true }), /could not be loaded from Google \(Failed to fetch\)/);
   assert.match(describeAccountError(new TypeError('x'), { online: false }), /offline/);
