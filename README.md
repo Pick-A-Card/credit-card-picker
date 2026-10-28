@@ -1,6 +1,6 @@
 # Pick-A-Card
 
-A phone-friendly web app that tells you which card to use for a purchase. It fixes two problems with Credit Karma's version:
+A phone-friendly web app that tells you which card to use for a purchase. The standout features are:
 
 1. **Rotating categories.** Discover it and Chase Freedom quarterly categories are built in. The app tracks whether you activated each quarter and how much of the $1,500 cap you've used.
 2. **Points aren't all worth the same.** Each rewards currency has a cents-per-point value *you* set. Restricted points (like GM Rewards) don't beat real cash back, and hotel and airline points use realistic values.
