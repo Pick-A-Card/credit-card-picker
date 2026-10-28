@@ -208,6 +208,13 @@
             "rates": {
               "dining": 7
             }
+          },
+          "2027-Q1": {
+            "cats": [
+              "groceries",
+              "streaming"
+            ],
+            "rate": 5
           }
         }
       },
@@ -1376,6 +1383,13 @@
               "dining",
               "groceries",
               "m:red_cross"
+            ],
+            "rate": 5
+          },
+          "2027-Q1": {
+            "cats": [
+              "groceries",
+              "streaming"
             ],
             "rate": 5
           }
