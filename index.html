@@ -13,8 +13,20 @@
 </head>
 <body>
   <header class="top">
-    <h1>Pick-A-Card</h1>
-    <span class="quarter" id="quarterBadge"></span>
+    <h1><button class="home-link" data-view="pick">Pick-A-Card</button></h1>
+    <div class="top-right">
+      <span class="quarter" id="quarterBadge"></span>
+      <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="menu" class="menu" hidden>
+      <button data-view="pick" class="active">💳 Pick a card</button>
+      <button data-view="wallet">👛 My wallet</button>
+      <button id="menuAddCard">＋ Add cards</button>
+      <button data-view="settings">⚙️ Settings</button>
+      <a href="https://buymeacoffee.com/pickacard" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+    </nav>
   </header>
 
   <main>
@@ -35,6 +47,8 @@
 
       <h2 class="section-title">At a glance</h2>
       <div id="tiles" class="tiles"></div>
+      <p class="home-footer">Free, no ads. Saving you money?
+        <a href="https://buymeacoffee.com/pickacard" target="_blank" rel="noopener">Buy me a coffee ☕</a></p>
     </section>
 
     <!-- WALLET -->
@@ -80,12 +94,6 @@
       <p class="muted small">Store data © OpenStreetMap contributors.</p>
     </section>
   </main>
-
-  <nav class="tabs">
-    <button data-view="pick" class="active">💳<span>Pick</span></button>
-    <button data-view="wallet">👛<span>Wallet</span></button>
-    <button data-view="settings">⚙️<span>Settings</span></button>
-  </nav>
 
   <dialog id="dialog"><form method="dialog" id="dialogBody"></form></dialog>
 

@@ -733,7 +733,7 @@ function renderAll() {
 
 function showView(name) {
   document.querySelectorAll('.view').forEach((v) => { v.hidden = v.id !== `view-${name}`; });
-  document.querySelectorAll('.tabs button').forEach((b) => b.classList.toggle('active', b.dataset.view === name));
+  document.querySelectorAll('#menu [data-view]').forEach((b) => b.classList.toggle('active', b.dataset.view === name));
   window.scrollTo(0, 0);
 }
 
@@ -743,7 +743,20 @@ function toast(msg) {
   setTimeout(() => t.remove(), 2500);
 }
 
-document.querySelectorAll('.tabs button').forEach((b) => b.addEventListener('click', () => showView(b.dataset.view)));
+// Hamburger menu (top right).
+const menu = $('#menu');
+const menuBtn = $('#menuBtn');
+function setMenu(open) {
+  menu.hidden = !open;
+  menuBtn.setAttribute('aria-expanded', String(open));
+  menuBtn.classList.toggle('open', open);
+}
+menuBtn.addEventListener('click', (e) => { e.stopPropagation(); setMenu(menu.hidden); });
+document.addEventListener('click', (e) => { if (!menu.hidden && !menu.contains(e.target)) setMenu(false); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+document.querySelectorAll('[data-view]').forEach((b) => b.addEventListener('click', () => { showView(b.dataset.view); setMenu(false); }));
+$('#menuAddCard').addEventListener('click', () => { setMenu(false); showView('wallet'); addCardDialog(); });
+menu.querySelector('a').addEventListener('click', () => setMenu(false));
 $('#locateBtn').addEventListener('click', locate);
 $('#search').addEventListener('input', renderSuggestions);
 $('#search').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('#suggestions .chip')?.click(); });
