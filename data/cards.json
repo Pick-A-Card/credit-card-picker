@@ -30,7 +30,7 @@
     "gm": {
       "name": "GM Rewards points",
       "cpp": 0.25,
-      "note": "Only usable toward GM vehicles/service. Set this to what they are really worth to you — if you rarely buy GM, keep it low."
+      "note": "Only usable toward GM vehicles/service. If you rarely buy GM, keep it low."
     },
     "hilton": {
       "name": "Hilton Honors points",
