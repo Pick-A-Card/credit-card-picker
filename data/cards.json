@@ -1264,7 +1264,8 @@
       "changelog": [],
       "issuer": "Target (TD Bank)",
       "type": "credit",
-      "annualFee": 0
+      "annualFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "presetId": "gm_rewards_mastercard",
@@ -1320,7 +1321,8 @@
       "changelog": [],
       "issuer": "Capital One",
       "type": "credit",
-      "annualFee": 0
+      "annualFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1413,7 +1415,8 @@
       "color": "#37475a",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1464,7 +1467,8 @@
       "color": "#3b4b5c",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1490,7 +1494,8 @@
       "color": "#4a5a6b",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1541,7 +1546,8 @@
       "color": "#2c3a48",
       "base": 1,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1588,7 +1594,8 @@
       "color": "#0b3d91",
       "base": 1,
       "annualFee": 150,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1601,17 +1608,24 @@
         },
         {
           "cats": [
-            "transit",
-            "rideshare",
-            "utilities",
-            "streaming"
+            "gas",
+            "groceries"
           ],
-          "rate": 2
+          "rate": 2,
+          "cap": {
+            "amount": 5000,
+            "period": "year"
+          }
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Updated to the current earning rates: 2x on Southwest, 2x on gas and groceries (first $5,000 a year)."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "southwest_plus",
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Plus",
@@ -1621,7 +1635,8 @@
       "color": "#304cb2",
       "base": 1,
       "annualFee": 99,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1630,21 +1645,24 @@
           "cats": [
             "m:southwest"
           ],
-          "rate": 3
+          "rate": 4
         },
         {
           "cats": [
-            "transit",
-            "rideshare",
-            "utilities",
-            "streaming"
+            "gas",
+            "dining"
           ],
           "rate": 2
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Updated to the current earning rates: 4x on Southwest, 2x on gas and dining."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "southwest_priority",
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Priority",
@@ -1654,7 +1672,8 @@
       "color": "#1f3a93",
       "base": 1,
       "annualFee": 229,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1697,7 +1716,8 @@
       "color": "#7a1f2b",
       "base": 2,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1731,7 +1751,8 @@
       "color": "#5a3e2b",
       "base": 1,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1744,16 +1765,31 @@
         },
         {
           "cats": [
-            "@travel",
+            "airfare",
+            "car_rental",
             "dining",
+            "groceries",
             "gas"
           ],
           "rate": 5
+        },
+        {
+          "cats": [
+            "@travel"
+          ],
+          "rate": 5,
+          "until": "2026-12-31",
+          "label": "Through Dec 31, 2026"
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "IHG card refresh (Oct 2026): annual fee rises to $150 (existing cardholders at their 2027 renewal). Now 5x on flights booked with the airline, car rentals, dining, groceries and gas. 5x on other travel ends Dec 31, 2026."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "ihg_premier",
       "issuer": "Chase",
       "name": "IHG One Rewards Premier",
@@ -1762,8 +1798,9 @@
       "currency": "ihg",
       "color": "#1d6b4f",
       "base": 3,
-      "annualFee": 99,
-      "foreignFee": 0
+      "annualFee": 150,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1859,18 +1896,25 @@
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Renamed the Classic Green Card on Aug 20, 2026 and closed to new applicants. Earning rates and the $150 fee are unchanged."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "amex_green",
       "issuer": "American Express",
-      "name": "Amex Green",
-      "short": "Amex Green",
+      "name": "Amex Classic Green Card",
+      "short": "Classic Green",
       "network": "amex",
       "currency": "amex_mr",
       "color": "#4f7a4a",
       "base": 1,
       "annualFee": 150,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "discontinued": "2026-07-23",
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1887,7 +1931,8 @@
       "color": "#5b8fc7",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 2.7
+      "foreignFee": 2.7,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1938,7 +1983,8 @@
       "color": "#3a6ea5",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 2.7
+      "foreignFee": 2.7,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -1977,7 +2023,8 @@
       "color": "#104c97",
       "base": 3,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2139,7 +2186,8 @@
       "color": "#22406e",
       "base": 3,
       "annualFee": 195,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2174,7 +2222,8 @@
       "color": "#8b2e3c",
       "base": 2,
       "annualFee": 250,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2219,7 +2268,8 @@
       "color": "#3c1e24",
       "base": 2,
       "annualFee": 650,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2252,7 +2302,8 @@
       "color": "#9b1b30",
       "base": 1,
       "annualFee": 150,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2297,7 +2348,8 @@
       "color": "#6b1222",
       "base": 1,
       "annualFee": 350,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2328,7 +2380,8 @@
       "color": "#3d0a14",
       "base": 1,
       "annualFee": 650,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2357,7 +2410,8 @@
       "color": "#003b70",
       "base": 1,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2379,8 +2433,13 @@
           "text": "Rounds points up to the nearest 10 on every purchase — great for small purchases"
         }
       ],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Replaced by the Citi Strata card in July 2025. You can add Citi Strata from the catalog."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "citi_rewards_plus",
       "issuer": "Citi",
       "name": "Citi Rewards+",
@@ -2390,7 +2449,9 @@
       "color": "#0f6fb5",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "discontinued": "2025-07-20",
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2423,7 +2484,8 @@
       "color": "#0078d2",
       "base": 1,
       "annualFee": 99,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2455,7 +2517,8 @@
       "color": "#2e3f50",
       "base": 2,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2480,7 +2543,8 @@
       "color": "#4b5d70",
       "base": 1.25,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2497,7 +2561,8 @@
       "color": "#8d99a5",
       "base": 1.5,
       "annualFee": 39,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2514,7 +2579,8 @@
       "color": "#5c6670",
       "base": 2,
       "annualFee": 150,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2531,7 +2597,8 @@
       "color": "#c41230",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2552,7 +2619,8 @@
       "color": "#9e0e26",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2577,7 +2645,8 @@
       "color": "#5e0a18",
       "base": 1.5,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2639,7 +2708,11 @@
           "cats": [
             "dining"
           ],
-          "rate": 4
+          "rate": 4,
+          "cap": {
+            "amount": 2000,
+            "period": "quarter"
+          }
         },
         {
           "cats": [
@@ -2653,7 +2726,7 @@
       ],
       "benefits": [],
       "changelog": [],
-      "version": "2026-10-13",
+      "version": "2026-10-28.1",
       "presetId": "usbank_altitude_go",
       "issuer": "U.S. Bank",
       "name": "U.S. Bank Altitude Go",
@@ -2663,7 +2736,8 @@
       "color": "#1a3a8a",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2709,7 +2783,8 @@
       "color": "#e86f1a",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2747,7 +2822,8 @@
       "color": "#003876",
       "base": 1,
       "annualFee": 99,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2760,8 +2836,13 @@
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Barclays stopped issuing American Airlines cards. Aviator Red accounts became the Citi AAdvantage Platinum Select on Apr 24, 2026."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "aa_aviator_red",
       "issuer": "Barclays",
       "name": "AAdvantage Aviator Red",
@@ -2771,7 +2852,9 @@
       "color": "#b5121b",
       "base": 1,
       "annualFee": 99,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "discontinued": "2026-04-24",
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2845,49 +2928,35 @@
       "color": "#003087",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
       "rules": [
         {
           "cats": [
-            "groceries"
-          ],
-          "rate": 3,
-          "label": "Your top category each statement",
-          "choiceOptions": [
-            "groceries",
             "dining",
-            "gas",
-            "utilities",
-            "transit",
-            "entertainment",
-            "travel_other",
-            "drugstore"
-          ]
-        },
-        {
-          "cats": [
-            "dining"
+            "entertainment"
           ],
-          "rate": 2,
-          "label": "Your second category each statement",
-          "choiceOptions": [
-            "groceries",
-            "dining",
-            "gas",
-            "utilities",
-            "transit",
-            "entertainment",
-            "travel_other",
-            "drugstore"
-          ]
+          "rate": 3
         }
       ],
-      "benefits": [],
-      "changelog": [],
-      "version": "2026-10-13",
+      "benefits": [
+        {
+          "text": "3% when you check out with Venmo online or pay a business on Venmo"
+        },
+        {
+          "text": "Approved before Sept 24, 2026? You earn 3% on your top category and 2% on your second instead. Edit the card to match."
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "New rewards for cards approved since Sept 24, 2026: 3% on dining and entertainment, 3% when you pay with Venmo, 1% on everything else."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "venmo_credit",
       "issuer": "Synchrony (Venmo)",
       "name": "Venmo Credit Card",
@@ -2897,7 +2966,8 @@
       "color": "#008cff",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2933,7 +3003,8 @@
       "color": "#0067a0",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -2961,18 +3032,25 @@
       "color": "#a6a6a6",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
       "rules": [],
       "benefits": [
         {
-          "text": "Requires a Robinhood Gold subscription"
+          "text": "Requires a Robinhood Gold subscription ($50/year)"
+        },
+        {
+          "text": "5% on travel booked through Robinhood's travel portal"
+        },
+        {
+          "text": "Cards opened before July 1, 2026 have no foreign transaction fee"
         }
       ],
       "changelog": [],
-      "version": "2026-10-13",
+      "version": "2026-10-28.1",
       "presetId": "robinhood_gold",
       "issuer": "Robinhood",
       "name": "Robinhood Gold Card",
@@ -2982,7 +3060,8 @@
       "color": "#c8a400",
       "base": 3,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3003,7 +3082,8 @@
       "color": "#368727",
       "base": 2,
       "annualFee": 0,
-      "foreignFee": 1
+      "foreignFee": 1,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3031,7 +3111,8 @@
       "color": "#1d2c4c",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "debit",
@@ -3091,7 +3172,8 @@
       "currency": "cash",
       "color": "#00d632",
       "base": 0,
-      "annualFee": 0
+      "annualFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "debit",
@@ -3112,7 +3194,8 @@
       "color": "#3d95ce",
       "base": 0,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "debit",
@@ -3122,8 +3205,13 @@
           "text": "1% cash back on up to $3,000 of debit purchases each month"
         }
       ],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Discover no longer opens new checking accounts (new customers are sent to Capital One). Existing cards keep working."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "discover_debit",
       "issuer": "Discover",
       "name": "Discover Cashback Debit",
@@ -3132,7 +3220,9 @@
       "currency": "cash",
       "color": "#ff8c3a",
       "base": 1,
-      "annualFee": 0
+      "annualFee": 0,
+      "discontinued": "2026-06-02",
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3161,7 +3251,8 @@
       "color": "#26313d",
       "base": 2,
       "annualFee": 195,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3187,7 +3278,8 @@
       "color": "#4f86c6",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3208,7 +3300,8 @@
       "color": "#5b6b7a",
       "base": 0,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3235,7 +3328,8 @@
       "color": "#1d4f91",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3244,15 +3338,7 @@
           "cats": [
             "m:united_airlines"
           ],
-          "rate": 3
-        },
-        {
-          "cats": [
-            "@travel",
-            "dining",
-            "streaming"
-          ],
-          "rate": 2
+          "rate": 4
         }
       ],
       "benefits": [
@@ -3263,8 +3349,13 @@
           ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Since April 2026: 4x on United purchases and 1x on everything else (the 2x travel, dining and streaming categories were removed)."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "united_quest",
       "issuer": "Chase",
       "name": "United Quest Card",
@@ -3274,7 +3365,8 @@
       "color": "#0a2e6b",
       "base": 1,
       "annualFee": 350,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3283,7 +3375,7 @@
           "cats": [
             "m:united_airlines"
           ],
-          "rate": 4
+          "rate": 5
         },
         {
           "cats": [
@@ -3301,8 +3393,13 @@
           ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Since April 2026: 5x on United purchases (was 4x)."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "united_club",
       "issuer": "Chase",
       "name": "United Club Infinite Card",
@@ -3312,7 +3409,8 @@
       "color": "#061e48",
       "base": 1,
       "annualFee": 695,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3325,17 +3423,24 @@
         },
         {
           "cats": [
-            "transit",
-            "rideshare",
-            "utilities",
-            "streaming"
+            "groceries",
+            "dining"
           ],
-          "rate": 2
+          "rate": 2,
+          "cap": {
+            "amount": 8000,
+            "period": "year"
+          }
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Updated to the current earning rates: 3x on Southwest, 2x on groceries and dining (first $8,000 a year)."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "southwest_premier",
       "issuer": "Chase",
       "name": "Southwest Rapid Rewards Premier",
@@ -3345,7 +3450,8 @@
       "color": "#2a46a8",
       "base": 1,
       "annualFee": 149,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3381,7 +3487,8 @@
       "color": "#9a3442",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3395,16 +3502,29 @@
         {
           "cats": [
             "dining",
-            "gas",
+            "groceries",
+            "gas"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
             "utilities",
             "streaming"
           ],
-          "rate": 3
+          "rate": 3,
+          "until": "2026-12-31",
+          "label": "Through Dec 31, 2026"
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "IHG card refresh (Oct 2026): 3x on dining, groceries and gas. Utilities and streaming stay 3x only through Dec 31, 2026."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "ihg_traveler",
       "issuer": "Chase",
       "name": "IHG One Rewards Traveler",
@@ -3414,7 +3534,8 @@
       "color": "#2b7a5f",
       "base": 2,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3422,25 +3543,47 @@
         {
           "cats": [
             "m:air_canada",
+            "@travel"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
             "dining",
             "groceries"
           ],
-          "rate": 3
+          "rate": 3,
+          "until": "2026-12-31",
+          "label": "Through Dec 31, 2026"
+        },
+        {
+          "cats": [
+            "dining",
+            "groceries",
+            "gas"
+          ],
+          "rate": 2
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Card refreshed in Sept 2026: renamed, annual fee now $195, 3x on Air Canada and travel, 2x on gas. Dining and groceries stay 3x through Dec 31, 2026, then 2x."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "aeroplan_card",
       "issuer": "Chase",
-      "name": "Aeroplan Credit Card",
+      "name": "Chase Air Canada Aeroplan Card",
       "short": "Aeroplan",
       "network": "mastercard",
       "currency": "aeroplan",
       "color": "#c8102e",
       "base": 1,
-      "annualFee": 95,
-      "foreignFee": 0
+      "annualFee": 195,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3471,7 +3614,8 @@
       "color": "#075aaa",
       "base": 1,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3480,7 +3624,11 @@
           "cats": [
             "m:instacart"
           ],
-          "rate": 5
+          "rate": 5,
+          "cap": {
+            "amount": 6000,
+            "period": "year"
+          }
         },
         {
           "cats": [
@@ -3500,7 +3648,7 @@
       ],
       "benefits": [],
       "changelog": [],
-      "version": "2026-10-28",
+      "version": "2026-10-28.1",
       "presetId": "instacart_mc",
       "issuer": "Chase",
       "name": "Instacart Mastercard",
@@ -3510,7 +3658,8 @@
       "color": "#43b02a",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3546,7 +3695,8 @@
       "color": "#eb1700",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3648,22 +3798,22 @@
       "rules": [
         {
           "cats": [
-            "airfare"
-          ],
-          "rate": 5,
-          "label": "Flights via Amex Travel"
-        },
-        {
-          "cats": [
             "m:amex_travel_portal"
           ],
           "rate": 5,
-          "label": "Prepaid hotels via Amex Travel"
+          "label": "Flights and prepaid hotels via Amex Travel"
+        },
+        {
+          "cats": [
+            "electronics"
+          ],
+          "rate": 2,
+          "label": "U.S. electronics, software, shipping and hardware suppliers"
         }
       ],
       "benefits": [
         {
-          "text": "1.5x on purchases of $5,000 or more"
+          "text": "2x on single purchases of $5,000 or more (up to $2 million a year)"
         },
         {
           "text": "Centurion / Priority Pass lounge access",
@@ -3672,8 +3822,13 @@
           ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Corrected: 5x applies only to flights and prepaid hotels booked through Amex Travel (not all airfare). Annual fee is $895."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "amex_business_platinum",
       "issuer": "American Express",
       "name": "Amex Business Platinum",
@@ -3682,8 +3837,9 @@
       "currency": "amex_mr",
       "color": "#7d8894",
       "base": 1,
-      "annualFee": 695,
-      "foreignFee": 0
+      "annualFee": 895,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3826,7 +3982,8 @@
       "color": "#c01933",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3858,7 +4015,8 @@
       "color": "#6e2531",
       "base": 2,
       "annualFee": 125,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3880,8 +4038,13 @@
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Amex stopped issuing this card in Aug 2026. Accounts moved to the U.S. Bank Prime Business Card, which you can add from the catalog."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "amazon_business_prime",
       "issuer": "American Express",
       "name": "Amazon Business Prime American Express",
@@ -3891,7 +4054,51 @@
       "color": "#1f2b38",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "discontinued": "2026-08-14",
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "amazon",
+            "whole_foods"
+          ],
+          "rate": 5,
+          "cap": {
+            "amount": 150000,
+            "period": "year"
+          }
+        },
+        {
+          "cats": [
+            "dining",
+            "gas",
+            "utilities"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [
+        {
+          "text": "Requires a Business Prime membership (without it, Amazon purchases earn 3%)"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28.1",
+      "presetId": "prime_business_usbank",
+      "issuer": "U.S. Bank",
+      "name": "Prime Business Card",
+      "short": "Prime Biz",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#232f3e",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3985,7 +4192,8 @@
       "color": "#00274d",
       "base": 1.5,
       "annualFee": 595,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4005,8 +4213,13 @@
           ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Annual fee rose from $595 to $695 on Aug 23, 2026."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "aa_executive",
       "issuer": "Citi",
       "name": "Citi AAdvantage Executive",
@@ -4015,8 +4228,9 @@
       "currency": "aa",
       "color": "#0b3a6b",
       "base": 1,
-      "annualFee": 595,
-      "foreignFee": 0
+      "annualFee": 695,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4041,7 +4255,8 @@
       "color": "#3c7ac2",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4062,7 +4277,8 @@
       "color": "#6f8fb0",
       "base": 0,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4087,7 +4303,8 @@
       "color": "#3a4856",
       "base": 2,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4104,7 +4321,8 @@
       "color": "#6c7a88",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4129,7 +4347,8 @@
       "color": "#1a2531",
       "base": 2,
       "annualFee": 395,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4150,7 +4369,8 @@
       "color": "#8b97a3",
       "base": 0,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4175,7 +4395,8 @@
       "color": "#3e0712",
       "base": 1.5,
       "annualFee": 550,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4236,7 +4457,8 @@
       "color": "#a51c24",
       "base": 0,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4257,7 +4479,8 @@
       "color": "#0d2a6b",
       "base": 2,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4300,7 +4523,8 @@
       "color": "#21407c",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4349,21 +4573,20 @@
         },
         {
           "cats": [
-            "groceries"
+            "gas"
           ],
           "rate": 3,
           "label": "Your everyday category",
           "choiceOptions": [
-            "groceries",
             "gas",
-            "dining",
+            "wholesale",
             "utilities"
           ]
         }
       ],
       "benefits": [],
       "changelog": [],
-      "version": "2026-10-28",
+      "version": "2026-10-28.1",
       "presetId": "usbank_shopper_cash",
       "issuer": "U.S. Bank",
       "name": "U.S. Bank Shopper Cash Rewards",
@@ -4373,7 +4596,8 @@
       "color": "#2b3f8c",
       "base": 1.5,
       "annualFee": 95,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4407,7 +4631,8 @@
             "rate": 5
           }
         }
-      }
+      },
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4436,7 +4661,8 @@
       "color": "#f08a3c",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4467,30 +4693,36 @@
       "color": "#1a4f9c",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
       "rules": [
         {
           "cats": [
-            "m:wyndham",
-            "gas",
-            "ev_charging"
+            "m:wyndham"
           ],
           "rate": 5
         },
         {
           "cats": [
             "dining",
-            "groceries"
+            "groceries",
+            "gas",
+            "ev_charging"
           ],
-          "rate": 2
+          "rate": 3
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Wyndham card refresh (June 2026): 5x at Wyndham, 3x on dining, groceries, gas and EV charging. Cards opened before June 17, 2026 may keep the older rates."
+        }
+      ],
+      "version": "2026-10-28.1",
       "presetId": "wyndham_earner",
       "issuer": "Barclays",
       "name": "Wyndham Rewards Earner Card",
@@ -4500,7 +4732,8 @@
       "color": "#004b8d",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4528,7 +4761,8 @@
       "currency": "cash",
       "color": "#ff9900",
       "base": 0,
-      "annualFee": 0
+      "annualFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4547,16 +4781,17 @@
         }
       ],
       "changelog": [],
-      "version": "2026-10-28",
+      "version": "2026-10-28.1",
       "presetId": "lowes_advantage",
       "issuer": "Synchrony",
-      "name": "Lowe's Advantage Card",
+      "name": "MyLowe's Rewards Credit Card",
       "short": "Lowe's Card",
       "network": "mastercard",
       "currency": "cash",
       "color": "#004990",
       "base": 0,
-      "annualFee": 0
+      "annualFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4580,7 +4815,8 @@
       "currency": "cash",
       "color": "#b5121b",
       "base": 1,
-      "annualFee": 0
+      "annualFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4761,7 +4997,8 @@
       "color": "#14325c",
       "base": 2,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4785,7 +5022,8 @@
       "color": "#0e2140",
       "base": 2,
       "annualFee": 49,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4801,15 +5039,14 @@
           "cats": [
             "groceries",
             "dining",
-            "streaming",
-            "utilities"
+            "streaming"
           ],
           "rate": 3
         }
       ],
       "benefits": [],
       "changelog": [],
-      "version": "2026-10-28",
+      "version": "2026-10-28.1",
       "presetId": "penfed_platinum_rewards",
       "issuer": "PenFed",
       "name": "PenFed Platinum Rewards Visa Signature",
@@ -4819,7 +5056,8 @@
       "color": "#1f3f73",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4840,7 +5078,8 @@
       "color": "#2f5a9e",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4857,18 +5096,19 @@
       "color": "#003b5c",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
       "rules": [],
       "benefits": [
         {
-          "text": "2% when redeemed into a SoFi account"
+          "text": "SoFi Plus members earn more (3.3% dining, 2.2% groceries, 1.1% else). Edit the card if that's you."
         }
       ],
       "changelog": [],
-      "version": "2026-10-28",
+      "version": "2026-10-28.1",
       "presetId": "sofi_everyday_cash",
       "issuer": "SoFi",
       "name": "SoFi Everyday Cash Rewards",
@@ -4876,9 +5116,10 @@
       "network": "mastercard",
       "currency": "cash",
       "color": "#00a2c7",
-      "base": 2,
+      "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4902,11 +5143,11 @@
       "rules": [],
       "benefits": [
         {
-          "text": "Cash back depends on repayment terms: about 1.25% on monthly terms, up to 1.5% with daily repayment, up to 2% with Rho Platinum. Edit the base rate to match yours."
+          "text": "Cash back depends on your plan: 1.5% with daily repayment, up to 2% with Rho Platinum. Edit the base rate to match yours."
         }
       ],
       "changelog": [],
-      "version": "2026-10-28",
+      "version": "2026-10-28.1",
       "presetId": "rho_corporate",
       "issuer": "Rho",
       "name": "Rho Corporate Card",
@@ -4914,8 +5155,9 @@
       "network": "visa",
       "currency": "cash",
       "color": "#3a2fd6",
-      "base": 1.25,
-      "annualFee": 0
+      "base": 1.5,
+      "annualFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4952,7 +5194,8 @@
       "currency": "cash",
       "color": "#5266eb",
       "base": 1.5,
-      "annualFee": 0
+      "annualFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -4977,7 +5220,8 @@
       "color": "#55626f",
       "base": 2,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -5130,7 +5374,8 @@
       "color": "#1c3a7a",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -5196,7 +5441,8 @@
       "color": "#b0102c",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -5213,7 +5459,8 @@
       "color": "#8a0c22",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 3
+      "foreignFee": 3,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -5268,7 +5515,8 @@
       "color": "#0a4f96",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     }
   ]
 }

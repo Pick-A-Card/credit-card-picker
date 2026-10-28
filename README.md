@@ -11,7 +11,7 @@ Other features:
 - **Store-specific deals.** Partner bonuses like Sapphire Preferred 5x at Lyft, travel-portal multipliers and co-brand hotel/airline bonuses count when you're at that merchant. When you pick a general category, a "Better at specific places" hint shows them. For example, Rideshare shows "Lyft: Sapphire Preferred 5%".
 - **Benefits that tip the decision.** Rental car insurance, cell phone protection, trip delay, lounge access and credits show up as 💡 tips and break ties.
 - **Traveling abroad.** The app notices when you're outside the US and subtracts foreign transaction fees.
-- **142 credit and debit cards** from 25+ issuers. Pick by issuer, search, or filter to debit cards (PayPal, Cash App, Venmo, Discover). You can also add any card yourself.
+- **143 credit and debit cards** from 25+ issuers. Pick by issuer, search, or filter to debit cards (PayPal, Cash App, Venmo, Discover). You can also add any card yourself.
 - Spending caps per month/quarter/year, "pick your category" cards, and store payment rules (Costco only takes Visa in store).
 - **Automatic updates.** Card terms and rotating categories update by themselves, with a "what changed" notice and Undo.
 - **Accounts (optional).** Sign in to sync your cards across devices and get email updates. This needs a one-time setup: see [SETUP-ACCOUNTS.md](SETUP-ACCOUNTS.md).
