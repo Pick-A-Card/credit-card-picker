@@ -129,6 +129,7 @@ main { padding: 16px; max-width: 640px; margin: 0 auto; }
 
 .currency { padding: 8px 0; border-bottom: 1px solid var(--border); }
 .currency input { width: 80px; }
+.currency select { max-width: 55%; }
 
 .top { position: sticky; }
 .home-link { background: none; border: none; padding: 0; font: inherit; font-weight: 700; color: inherit; cursor: pointer; }

@@ -512,29 +512,58 @@ function nextQuarter(quarters) {
 
 // ---------- Settings ----------
 
-function renderSettings() {
-  const box = $('#currencyList');
+const CPP_CHOICES = [0, 0.1, 0.25, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.25, 1.3, 1.4, 1.5, 1.6, 1.75, 2, 2.25, 2.5];
+
+function renderPoints() {
+  const box = $('#pointsList');
   box.replaceChildren();
-  for (const [id, c] of Object.entries(state.currencies)) {
+  const byCurrency = new Map();
+  for (const card of state.wallet) {
+    if (card.currency === 'cash' || !state.currencies[card.currency]) continue;
+    if (!byCurrency.has(card.currency)) byCurrency.set(card.currency, []);
+    byCurrency.get(card.currency).push(card);
+  }
+  if (!state.wallet.length) {
+    box.append(el('p', { class: 'muted' }, 'Add your cards first (menu → Add cards). Their rewards programs will show up here.'));
+  } else if (!byCurrency.size) {
+    box.append(el('p', { class: 'muted' }, 'All your cards earn cash back, which is always worth 1¢ per point, so there is nothing to set.'));
+  }
+  for (const [id, cards] of byCurrency) {
+    const c = state.currencies[id];
+    const typical = catalog.currencies?.[id]?.cpp;
+    const values = [...new Set([...CPP_CHOICES, Number(c.cpp), ...(typical != null ? [typical] : [])])].sort((a, b) => a - b);
+    const select = el('select', { onchange: (e) => {
+      if (e.target.value === 'custom') {
+        const v = Number(prompt(`What is one ${c.name} point worth to you, in cents?`, String(c.cpp)));
+        if (Number.isFinite(v) && v >= 0) c.cpp = v;
+      } else {
+        c.cpp = Number(e.target.value);
+      }
+      persist();
+    } },
+      values.map((v) => el('option', { value: v, selected: Number(c.cpp) === v }, `${v}¢${v === typical ? ' (typical)' : ''}`)),
+      el('option', { value: 'custom' }, 'Custom…'),
+    );
     box.append(el('div', { class: 'currency' },
-      el('label', { class: 'row' },
-        el('span', { class: 'grow' }, c.name),
-        el('input', { type: 'number', step: '0.05', min: '0', value: c.cpp, disabled: c.locked, onchange: (e) => { c.cpp = Number(e.target.value); persist(); } }),
-        ' ¢/pt',
-      ),
+      el('div', { class: 'row' }, el('strong', { class: 'grow' }, c.name), select),
+      el('div', { class: 'small muted' }, `Your cards: ${cards.map((k) => k.short || k.name).join(', ')}`),
       c.note && el('div', { class: 'small muted' }, c.note),
     ));
   }
-  box.append(el('button', { onclick: () => {
-    const name = prompt('Currency name (e.g. "Bilt points")');
+  box.append(el('button', { class: 'link small', onclick: () => {
+    const name = prompt('Name of the rewards program (e.g. "Bilt points"), for a custom card');
     if (!name) return;
     const cpp = Number(prompt('Cents per point to you', '1'));
     state.currencies[`c_${newUid()}`] = { name, cpp: cpp || 1 };
     persist();
-  } }, '＋ Add currency'));
+    toast('Added. Choose it in your custom card\'s Edit screen.');
+  } }, '＋ Add a rewards program for a custom card'));
+}
+
+function renderSettings() {
   $('#catalogInfo').textContent = catalog.updated
     ? `Card data from ${catalog.updated}. Last checked ${state.lastChecked ? new Date(state.lastChecked).toLocaleString() : 'never'}.`
-    : 'Card data has not loaded yet (are you offline?).';
+    : "Card data hasn't loaded yet.";
   $('#autoLocate').checked = state.settings.autoLocate;
   $('#radius').value = state.settings.radius;
 }
@@ -729,6 +758,7 @@ function renderAll() {
   renderResult();
   renderWallet();
   renderSettings();
+  renderPoints();
 }
 
 function showView(name) {

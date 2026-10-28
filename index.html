@@ -24,6 +24,7 @@
       <button data-view="pick" class="active">💳 Pick a card</button>
       <button data-view="wallet">👛 My wallet</button>
       <button id="menuAddCard">＋ Add cards</button>
+      <button data-view="points">💲 Point values</button>
       <button data-view="settings">⚙️ Settings</button>
       <a href="https://buymeacoffee.com/pickacard" target="_blank" rel="noopener">☕ Buy me a coffee</a>
     </nav>
@@ -60,14 +61,17 @@
       <div id="logList"></div>
     </section>
 
+    <!-- POINT VALUES -->
+    <section id="view-points" class="view" hidden>
+      <h2 class="section-title">What your points are worth</h2>
+      <p class="muted small">Pick what one point is worth <em>to you</em>, in cents. Recommendations multiply each card's earn rate by this value, so points you can only spend in one place (like GM Rewards) don't beat real cash back. Only the rewards programs of cards in your wallet are shown.</p>
+      <div id="pointsList"></div>
+    </section>
+
     <!-- SETTINGS -->
     <section id="view-settings" class="view" hidden>
       <h2 class="section-title">Account</h2>
       <div id="account"></div>
-
-      <h2 class="section-title">What your points are worth</h2>
-      <p class="muted small">Cents per point, <em>to you</em>. Recommendations multiply each card's earn rate by this value, so restricted points (like GM Rewards) don't beat real cash back.</p>
-      <div id="currencyList"></div>
 
       <h2 class="section-title">Card updates</h2>
       <p class="muted small" id="catalogInfo"></p>

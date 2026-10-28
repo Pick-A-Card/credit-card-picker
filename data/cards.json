@@ -1420,6 +1420,7 @@
       "rules": [
         {
           "cats": [
+            "office_supply",
             "utilities"
           ],
           "rate": 5,
@@ -1428,7 +1429,7 @@
             "period": "year",
             "group": "five"
           },
-          "label": "Internet, cable & phone (and office supply stores)"
+          "label": "Office supply stores, internet, cable & phone"
         },
         {
           "cats": [
@@ -1453,7 +1454,7 @@
       ],
       "benefits": [],
       "changelog": [],
-      "version": "2026-10-13",
+      "version": "2026-10-28",
       "presetId": "ink_cash",
       "issuer": "Chase",
       "name": "Chase Ink Business Cash",
@@ -4893,6 +4894,379 @@
       "currency": "cash",
       "color": "#2f9e6b",
       "base": 1.5,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "Cash back depends on repayment terms: about 1.25% on monthly terms, up to 1.5% with daily repayment, up to 2% with Rho Platinum. Edit the base rate to match yours."
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "rho_corporate",
+      "issuer": "Rho",
+      "name": "Rho Corporate Card",
+      "short": "Rho",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#3a2fd6",
+      "base": 1.25,
+      "annualFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "Up to 1.5% cash back; Ramp sets each company's rate"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "ramp_corporate",
+      "issuer": "Ramp",
+      "name": "Ramp Corporate Card",
+      "short": "Ramp",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#e4f222",
+      "base": 1.5,
+      "annualFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "mercury_io",
+      "issuer": "Mercury",
+      "name": "Mercury IO Card",
+      "short": "Mercury IO",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#5266eb",
+      "base": 1.5,
+      "annualFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:capital_one_travel_portal"
+          ],
+          "rate": 5,
+          "label": "Hotels & rental cars via Capital One Business Travel"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "spark_cash",
+      "issuer": "Capital One",
+      "name": "Capital One Spark Cash",
+      "short": "Spark Cash",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#55626f",
+      "base": 2,
+      "annualFee": 95,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:lowes"
+          ],
+          "rate": 5,
+          "label": "5% off at Lowe's (plus 2x points)"
+        },
+        {
+          "cats": [
+            "dining",
+            "office_supply",
+            "utilities"
+          ],
+          "rate": 3,
+          "label": "U.S. restaurants, office supply stores, wireless phone"
+        }
+      ],
+      "benefits": [
+        {
+          "text": "Amex's Lowe's partnership is ending; Lowe's is moving cardholders to a Synchrony-issued replacement card"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "American Express's Lowe's partnership is ending; the card is being replaced by a Synchrony-issued Lowe's card."
+        }
+      ],
+      "version": "2026-10-28",
+      "presetId": "lowes_business_amex",
+      "issuer": "American Express",
+      "name": "Lowe's Business Rewards Card (Amex)",
+      "short": "Lowe's Biz",
+      "network": "amex",
+      "currency": "amex_mr",
+      "color": "#00498f",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 2.7,
+      "discontinued": "2026-04-01",
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:united_airlines",
+            "dining",
+            "gas",
+            "office_supply",
+            "transit"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [
+        {
+          "text": "Free first checked bag on United",
+          "cats": [
+            "m:united_airlines"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "united_business",
+      "issuer": "Chase",
+      "name": "United Business Card",
+      "short": "United Biz",
+      "network": "visa",
+      "currency": "united",
+      "color": "#163f7e",
+      "base": 1,
+      "annualFee": 150,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:delta"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [
+        {
+          "text": "2x on shipping and select advertising (up to $50k each per year)"
+        },
+        {
+          "text": "Free first checked bag on Delta",
+          "cats": [
+            "m:delta"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "delta_gold_business",
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Gold Business American Express",
+      "short": "Delta Gold Biz",
+      "network": "amex",
+      "currency": "delta",
+      "color": "#8c1428",
+      "base": 1,
+      "annualFee": 150,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "gas",
+            "ev_charging",
+            "office_supply",
+            "utilities",
+            "dining"
+          ],
+          "rate": 3,
+          "label": "Gas & EV, office supply, cell phone, restaurants"
+        }
+      ],
+      "benefits": [
+        {
+          "text": "5% on prepaid hotels and car rentals booked through the U.S. Bank travel center",
+          "cats": [
+            "hotels",
+            "car_rental"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "usbank_business_triple_cash",
+      "issuer": "U.S. Bank",
+      "name": "U.S. Bank Triple Cash Rewards Visa Business",
+      "short": "USB Triple Cash",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#1c3a7a",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "wf_signify_business",
+      "issuer": "Wells Fargo",
+      "name": "Wells Fargo Signify Business Cash",
+      "short": "Signify Biz",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#b31b22",
+      "base": 2,
+      "annualFee": 0,
+      "foreignFee": 3,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "gas"
+          ],
+          "rate": 3,
+          "cap": {
+            "amount": 50000,
+            "period": "year",
+            "group": "combo"
+          },
+          "label": "Your choice category",
+          "choiceOptions": [
+            "gas",
+            "office_supply",
+            "travel_other",
+            "utilities",
+            "electronics"
+          ]
+        },
+        {
+          "cats": [
+            "dining"
+          ],
+          "rate": 2,
+          "cap": {
+            "amount": 50000,
+            "period": "year",
+            "group": "combo"
+          }
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "bofa_business_customized",
+      "issuer": "Bank of America",
+      "name": "BofA Business Advantage Customized Cash",
+      "short": "BofA Biz Custom",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#b0102c",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "bofa_business_unlimited",
+      "issuer": "Bank of America",
+      "name": "BofA Business Advantage Unlimited Cash",
+      "short": "BofA Biz Unl.",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#8a0c22",
+      "base": 1.5,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:costco_gas"
+          ],
+          "rate": 5,
+          "cap": {
+            "amount": 7000,
+            "period": "year",
+            "group": "gas"
+          },
+          "label": "Gas at Costco"
+        },
+        {
+          "cats": [
+            "gas",
+            "ev_charging"
+          ],
+          "rate": 4,
+          "cap": {
+            "amount": 7000,
+            "period": "year",
+            "group": "gas"
+          }
+        },
+        {
+          "cats": [
+            "@travel",
+            "dining"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "costco"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "costco_business",
+      "issuer": "Citi",
+      "name": "Costco Anywhere Visa Business (Citi)",
+      "short": "Costco Biz",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#0a4f96",
+      "base": 1,
       "annualFee": 0,
       "foreignFee": 0
     }
