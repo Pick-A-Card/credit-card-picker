@@ -14,7 +14,7 @@ follows this file to keep that data current. A person can follow it too.
    Freedom Flex). Add the **current and next quarter** as soon as they are announced. Fix any
    quarter that is wrong.
 2. **Verify unverified cards.** Cards without a `verified` date were added from general knowledge
-   and have not been checked against 2026 sources. Each run, verify up to 15 of them, starting
+   and have not been checked against 2026 sources. Each run, verify up to 25 of them, starting
    with the most popular. Fix anything wrong, then set `verified` to today's date. If you fixed
    anything, bump `version` so wallets pick up the fix. Add a changelog entry only if the terms
    actually changed recently; a correction alone shows people a quiet "details refreshed" notice

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-21",
+  "updated": "2026-10-28",
   "currencies": {
     "cash": {
       "name": "Cash back",
@@ -81,6 +81,41 @@
       "name": "Alaska / Atmos Rewards miles",
       "cpp": 1.3,
       "note": "Typically worth about 1.3–1.5¢."
+    },
+    "aeroplan": {
+      "name": "Air Canada Aeroplan points",
+      "cpp": 1.5,
+      "note": "Typically worth about 1.4–1.6¢."
+    },
+    "avios": {
+      "name": "Avios (British Airways, Aer Lingus, Iberia)",
+      "cpp": 1.3,
+      "note": "Typically worth about 1.2–1.5¢."
+    },
+    "wyndham": {
+      "name": "Wyndham Rewards points",
+      "cpp": 0.9,
+      "note": "Typically worth about 0.8–1.1¢."
+    },
+    "bilt": {
+      "name": "Bilt points",
+      "cpp": 1.25,
+      "note": "1¢ toward rent; more via airline and hotel transfer partners."
+    },
+    "disney": {
+      "name": "Disney Rewards Dollars",
+      "cpp": 1,
+      "note": "Only usable on Disney purchases. Lower this if you rarely spend at Disney."
+    },
+    "onepay": {
+      "name": "OnePay points",
+      "cpp": 1,
+      "note": "Redeemable for cash or statement credit."
+    },
+    "altitude": {
+      "name": "U.S. Bank Altitude points",
+      "cpp": 1,
+      "note": "1¢ toward travel or cash back."
     }
   },
   "cards": [
@@ -2742,7 +2777,8 @@
       "rules": [
         {
           "cats": [
-            "m:alaska_airlines"
+            "m:alaska_airlines",
+            "m:hawaiian_airlines"
           ],
           "rate": 3
         },
@@ -2766,18 +2802,24 @@
           ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "text": "Renamed to the Atmos Rewards Ascent card after Alaska and Hawaiian combined loyalty programs; 3x also applies to Hawaiian Airlines."
+        }
+      ],
+      "version": "2026-10-28",
       "presetId": "alaska_visa",
       "issuer": "Bank of America",
-      "name": "Alaska Airlines Visa (Atmos Rewards)",
-      "short": "Alaska Visa",
+      "name": "Atmos Rewards Ascent Visa (Alaska/Hawaiian)",
+      "short": "Atmos Ascent",
       "network": "visa",
       "currency": "alaska",
       "color": "#01426a",
       "base": 1,
       "annualFee": 95,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-10-28"
     },
     {
       "type": "credit",
@@ -3090,6 +3132,1769 @@
       "color": "#ff8c3a",
       "base": 1,
       "annualFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:chase_travel_portal"
+          ],
+          "rate": 5,
+          "label": "Booked through Chase Travel"
+        }
+      ],
+      "benefits": [
+        {
+          "text": "2.5% on purchases of $5,000 or more"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "ink_premier",
+      "issuer": "Chase",
+      "name": "Chase Ink Business Premier",
+      "short": "Ink Premier",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#26313d",
+      "base": 2,
+      "annualFee": 195,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:lyft"
+          ],
+          "rate": 2,
+          "until": "2027-09-30",
+          "label": "Lyft rides (Chase × Lyft, through Sept 2027)"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "freedom_rise",
+      "issuer": "Chase",
+      "name": "Chase Freedom Rise",
+      "short": "Freedom Rise",
+      "network": "visa",
+      "currency": "chase_ur",
+      "color": "#4f86c6",
+      "base": 1.5,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "No rewards; built for 0% intro APR / balance transfers"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "slate_edge",
+      "issuer": "Chase",
+      "name": "Chase Slate Edge",
+      "short": "Slate Edge",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#5b6b7a",
+      "base": 0,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:united_airlines",
+            "gas",
+            "transit",
+            "rideshare"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "united_gateway",
+      "issuer": "Chase",
+      "name": "United Gateway Card",
+      "short": "United Gateway",
+      "network": "visa",
+      "currency": "united",
+      "color": "#1d4f91",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:united_airlines"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "@travel",
+            "dining",
+            "streaming"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [
+        {
+          "text": "Free first and second checked bags on United",
+          "cats": [
+            "m:united_airlines"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "united_quest",
+      "issuer": "Chase",
+      "name": "United Quest Card",
+      "short": "United Quest",
+      "network": "visa",
+      "currency": "united",
+      "color": "#0a2e6b",
+      "base": 1,
+      "annualFee": 350,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:united_airlines"
+          ],
+          "rate": 4
+        },
+        {
+          "cats": [
+            "@travel",
+            "dining"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [
+        {
+          "text": "United Club lounge membership",
+          "cats": [
+            "m:united_airlines"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "united_club",
+      "issuer": "Chase",
+      "name": "United Club Infinite Card",
+      "short": "United Club",
+      "network": "visa",
+      "currency": "united",
+      "color": "#061e48",
+      "base": 1,
+      "annualFee": 695,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:southwest"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "transit",
+            "rideshare",
+            "utilities",
+            "streaming"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "southwest_premier",
+      "issuer": "Chase",
+      "name": "Southwest Rapid Rewards Premier",
+      "short": "SW Premier",
+      "network": "visa",
+      "currency": "southwest",
+      "color": "#2a46a8",
+      "base": 1,
+      "annualFee": 149,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:marriott"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "groceries",
+            "rideshare",
+            "streaming",
+            "utilities",
+            "m:doordash",
+            "m:uber_eats",
+            "m:grubhub"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "marriott_bold",
+      "issuer": "Chase",
+      "name": "Marriott Bonvoy Bold",
+      "short": "Bonvoy Bold",
+      "network": "visa",
+      "currency": "marriott",
+      "color": "#9a3442",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:ihg"
+          ],
+          "rate": 5
+        },
+        {
+          "cats": [
+            "dining",
+            "gas",
+            "utilities",
+            "streaming"
+          ],
+          "rate": 3
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "ihg_traveler",
+      "issuer": "Chase",
+      "name": "IHG One Rewards Traveler",
+      "short": "IHG Traveler",
+      "network": "mastercard",
+      "currency": "ihg",
+      "color": "#2b7a5f",
+      "base": 2,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:air_canada",
+            "dining",
+            "groceries"
+          ],
+          "rate": 3
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "aeroplan_card",
+      "issuer": "Chase",
+      "name": "Aeroplan Credit Card",
+      "short": "Aeroplan",
+      "network": "mastercard",
+      "currency": "aeroplan",
+      "color": "#c8102e",
+      "base": 1,
+      "annualFee": 95,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:british_airways"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "hotels"
+          ],
+          "rate": 2,
+          "label": "Hotels booked direct"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "british_airways",
+      "issuer": "Chase",
+      "name": "British Airways Visa Signature",
+      "short": "BA Visa",
+      "network": "visa",
+      "currency": "avios",
+      "color": "#075aaa",
+      "base": 1,
+      "annualFee": 95,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:instacart"
+          ],
+          "rate": 5
+        },
+        {
+          "cats": [
+            "m:chase_travel_portal"
+          ],
+          "rate": 5,
+          "label": "Booked through Chase Travel"
+        },
+        {
+          "cats": [
+            "dining",
+            "gas",
+            "streaming"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "instacart_mc",
+      "issuer": "Chase",
+      "name": "Instacart Mastercard",
+      "short": "Instacart MC",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#43b02a",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:doordash"
+          ],
+          "rate": 4
+        },
+        {
+          "cats": [
+            "dining"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "groceries"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "doordash_mc",
+      "issuer": "Chase",
+      "name": "DoorDash Rewards Mastercard",
+      "short": "DoorDash MC",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#eb1700",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "disney_visa",
+      "issuer": "Chase",
+      "name": "Disney Visa",
+      "short": "Disney Visa",
+      "network": "visa",
+      "currency": "disney",
+      "color": "#113ccf",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 3,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:disney",
+            "m:hulu"
+          ],
+          "rate": 5,
+          "label": "Disney+, Hulu, ESPN+"
+        },
+        {
+          "cats": [
+            "gas",
+            "groceries",
+            "dining",
+            "m:disney_parks_and_stores"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "disney_premier",
+      "issuer": "Chase",
+      "name": "Disney Premier Visa",
+      "short": "Disney Premier",
+      "network": "visa",
+      "currency": "disney",
+      "color": "#0b2a99",
+      "base": 1,
+      "annualFee": 49,
+      "foreignFee": 3,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:disney",
+            "m:hulu"
+          ],
+          "rate": 10,
+          "label": "Disney+, Hulu, ESPN+"
+        },
+        {
+          "cats": [
+            "m:disney_parks_and_stores",
+            "gas"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "groceries",
+            "dining"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "disney_inspire",
+      "issuer": "Chase",
+      "name": "Disney Inspire Visa",
+      "short": "Disney Inspire",
+      "network": "visa",
+      "currency": "disney",
+      "color": "#3a1d8f",
+      "base": 1,
+      "annualFee": 149,
+      "foreignFee": 3,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "airfare"
+          ],
+          "rate": 5,
+          "label": "Flights via Amex Travel"
+        },
+        {
+          "cats": [
+            "m:amex_travel_portal"
+          ],
+          "rate": 5,
+          "label": "Prepaid hotels via Amex Travel"
+        }
+      ],
+      "benefits": [
+        {
+          "text": "1.5x on purchases of $5,000 or more"
+        },
+        {
+          "text": "Centurion / Priority Pass lounge access",
+          "cats": [
+            "airfare"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "amex_business_platinum",
+      "issuer": "American Express",
+      "name": "Amex Business Platinum",
+      "short": "Biz Platinum",
+      "network": "amex",
+      "currency": "amex_mr",
+      "color": "#7d8894",
+      "base": 1,
+      "annualFee": 695,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "dining"
+          ],
+          "rate": 4,
+          "cap": {
+            "amount": 150000,
+            "period": "year",
+            "group": "top2"
+          },
+          "label": "Top category #1 (your 2 highest each month)",
+          "choiceOptions": [
+            "dining",
+            "gas",
+            "transit",
+            "utilities",
+            "electronics",
+            "online"
+          ]
+        },
+        {
+          "cats": [
+            "gas"
+          ],
+          "rate": 4,
+          "cap": {
+            "amount": 150000,
+            "period": "year",
+            "group": "top2"
+          },
+          "label": "Top category #2",
+          "choiceOptions": [
+            "dining",
+            "gas",
+            "transit",
+            "utilities",
+            "electronics",
+            "online"
+          ]
+        },
+        {
+          "cats": [
+            "m:amex_travel_portal"
+          ],
+          "rate": 3,
+          "label": "Flights & prepaid hotels via Amex Travel"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "amex_business_gold",
+      "issuer": "American Express",
+      "name": "Amex Business Gold",
+      "short": "Biz Gold",
+      "network": "amex",
+      "currency": "amex_mr",
+      "color": "#a07d2c",
+      "base": 1,
+      "annualFee": 375,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "other",
+            "dining",
+            "groceries",
+            "gas",
+            "online",
+            "amazon",
+            "target",
+            "walmart",
+            "wholesale",
+            "drugstore",
+            "home_improvement",
+            "entertainment",
+            "streaming",
+            "utilities",
+            "@travel",
+            "department",
+            "electronics",
+            "auto_service",
+            "gm",
+            "fitness",
+            "ev_charging",
+            "paypal",
+            "charity"
+          ],
+          "rate": 2,
+          "cap": {
+            "amount": 50000,
+            "period": "year"
+          },
+          "label": "2% on everything (first $50k/yr)"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "amex_blue_business_cash",
+      "issuer": "American Express",
+      "name": "Amex Blue Business Cash",
+      "short": "Blue Biz Cash",
+      "network": "amex",
+      "currency": "cash",
+      "color": "#2f6db5",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 2.7,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:delta",
+            "dining"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "delta_blue",
+      "issuer": "American Express",
+      "name": "Delta SkyMiles Blue American Express",
+      "short": "Delta Blue",
+      "network": "amex",
+      "currency": "delta",
+      "color": "#c01933",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:marriott"
+          ],
+          "rate": 6
+        },
+        {
+          "cats": [
+            "dining",
+            "gas",
+            "utilities"
+          ],
+          "rate": 4
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "marriott_business_amex",
+      "issuer": "American Express",
+      "name": "Marriott Bonvoy Business American Express",
+      "short": "Bonvoy Biz",
+      "network": "amex",
+      "currency": "marriott",
+      "color": "#6e2531",
+      "base": 2,
+      "annualFee": 125,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "amazon",
+            "whole_foods"
+          ],
+          "rate": 5
+        },
+        {
+          "cats": [
+            "dining",
+            "gas",
+            "utilities"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "amazon_business_prime",
+      "issuer": "American Express",
+      "name": "Amazon Business Prime American Express",
+      "short": "Amazon Biz Prime",
+      "network": "amex",
+      "currency": "cash",
+      "color": "#1f2b38",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "groceries",
+            "gas",
+            "ev_charging",
+            "transit"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "fitness"
+          ],
+          "rate": 3,
+          "label": "Your self-select category",
+          "choiceOptions": [
+            "fitness",
+            "entertainment",
+            "streaming",
+            "drugstore"
+          ]
+        },
+        {
+          "cats": [
+            "dining"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [
+        {
+          "text": "5x on hotels, car rentals and attractions booked through Citi Travel",
+          "cats": [
+            "hotels",
+            "car_rental"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "citi_strata",
+      "issuer": "Citi",
+      "name": "Citi Strata",
+      "short": "Strata",
+      "network": "mastercard",
+      "currency": "citi_ty",
+      "color": "#005b9a",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 3,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "dining"
+          ],
+          "rate": 3
+        }
+      ],
+      "benefits": [
+        {
+          "text": "12x on hotels, car rentals and attractions and 6x on flights booked through Citi Travel",
+          "cats": [
+            "hotels",
+            "car_rental",
+            "airfare"
+          ]
+        },
+        {
+          "text": "6x on dining during \"Citi Nights\" (Fri–Sat evenings)",
+          "cats": [
+            "dining"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "citi_strata_elite",
+      "issuer": "Citi",
+      "name": "Citi Strata Elite",
+      "short": "Strata Elite",
+      "network": "mastercard",
+      "currency": "citi_ty",
+      "color": "#00274d",
+      "base": 1.5,
+      "annualFee": 595,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:american_airlines"
+          ],
+          "rate": 4
+        }
+      ],
+      "benefits": [
+        {
+          "text": "Admirals Club lounge membership",
+          "cats": [
+            "m:american_airlines"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "aa_executive",
+      "issuer": "Citi",
+      "name": "Citi AAdvantage Executive",
+      "short": "AA Executive",
+      "network": "mastercard",
+      "currency": "aa",
+      "color": "#0b3a6b",
+      "base": 1,
+      "annualFee": 595,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:american_airlines",
+            "groceries"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "aa_mileup",
+      "issuer": "Citi",
+      "name": "Citi AAdvantage MileUp",
+      "short": "AA MileUp",
+      "network": "mastercard",
+      "currency": "aa",
+      "color": "#3c7ac2",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "No rewards; built for 0% intro APR / balance transfers"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "citi_simplicity",
+      "issuer": "Citi",
+      "name": "Citi Simplicity",
+      "short": "Simplicity",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#6f8fb0",
+      "base": 0,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:capital_one_travel_portal"
+          ],
+          "rate": 5,
+          "label": "Hotels & rental cars via Capital One Travel"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "spark_miles",
+      "issuer": "Capital One",
+      "name": "Capital One Spark Miles",
+      "short": "Spark Miles",
+      "network": "visa",
+      "currency": "cap1_miles",
+      "color": "#3a4856",
+      "base": 2,
+      "annualFee": 95,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "spark_cash_select",
+      "issuer": "Capital One",
+      "name": "Capital One Spark Cash Select",
+      "short": "Spark Select",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#6c7a88",
+      "base": 1.5,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:capital_one_travel_portal"
+          ],
+          "rate": 10,
+          "label": "Capital One Travel (10x hotels & rental cars, 5x flights)"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "venture_x_business",
+      "issuer": "Capital One",
+      "name": "Capital One Venture X Business",
+      "short": "VX Business",
+      "network": "visa",
+      "currency": "cap1_miles",
+      "color": "#1a2531",
+      "base": 2,
+      "annualFee": 395,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "No rewards; credit-building card"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "capital_one_platinum",
+      "issuer": "Capital One",
+      "name": "Capital One Platinum",
+      "short": "Cap1 Platinum",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#8b97a3",
+      "base": 0,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "@travel",
+            "dining"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "bofa_premium_elite",
+      "issuer": "Bank of America",
+      "name": "BofA Premium Rewards Elite",
+      "short": "BofA Elite",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#3e0712",
+      "base": 1.5,
+      "annualFee": 550,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:alaska_airlines",
+            "m:hawaiian_airlines",
+            "dining"
+          ],
+          "rate": 3
+        }
+      ],
+      "benefits": [
+        {
+          "text": "3x on every purchase made in a foreign currency"
+        },
+        {
+          "text": "10% points bonus with an eligible Bank of America account"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "atmos_summit",
+      "issuer": "Bank of America",
+      "name": "Atmos Rewards Summit Visa Infinite (Alaska/Hawaiian)",
+      "short": "Atmos Summit",
+      "network": "visa",
+      "currency": "alaska",
+      "color": "#012a4a",
+      "base": 1,
+      "annualFee": 395,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "No rewards; built for 0% intro APR"
+        },
+        {
+          "text": "Cell phone protection when you pay your phone bill with this card",
+          "cats": [
+            "utilities"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "wf_reflect",
+      "issuer": "Wells Fargo",
+      "name": "Wells Fargo Reflect",
+      "short": "Reflect",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#a51c24",
+      "base": 0,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "Up to 4% with large U.S. Bank balances (edit the base rate to match your tier)"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "usbank_smartly",
+      "issuer": "U.S. Bank",
+      "name": "U.S. Bank Smartly Visa Signature",
+      "short": "Smartly",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#0d2a6b",
+      "base": 2,
+      "annualFee": 0,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "gas",
+            "ev_charging"
+          ],
+          "rate": 4,
+          "cap": {
+            "amount": 1000,
+            "period": "quarter"
+          }
+        },
+        {
+          "cats": [
+            "@travel"
+          ],
+          "rate": 4
+        },
+        {
+          "cats": [
+            "dining",
+            "streaming",
+            "groceries"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "usbank_altitude_connect",
+      "issuer": "U.S. Bank",
+      "name": "U.S. Bank Altitude Connect",
+      "short": "Altitude Connect",
+      "network": "visa",
+      "currency": "altitude",
+      "color": "#21407c",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "amazon"
+          ],
+          "rate": 6,
+          "cap": {
+            "amount": 1500,
+            "period": "quarter",
+            "group": "six"
+          },
+          "label": "Your retailer #1",
+          "choiceOptions": [
+            "amazon",
+            "target",
+            "walmart",
+            "m:best_buy",
+            "m:the_home_depot",
+            "m:lowes",
+            "m:costco"
+          ]
+        },
+        {
+          "cats": [
+            "target"
+          ],
+          "rate": 6,
+          "cap": {
+            "amount": 1500,
+            "period": "quarter",
+            "group": "six"
+          },
+          "label": "Your retailer #2",
+          "choiceOptions": [
+            "amazon",
+            "target",
+            "walmart",
+            "m:best_buy",
+            "m:the_home_depot",
+            "m:lowes",
+            "m:costco"
+          ]
+        },
+        {
+          "cats": [
+            "groceries"
+          ],
+          "rate": 3,
+          "label": "Your everyday category",
+          "choiceOptions": [
+            "groceries",
+            "gas",
+            "dining",
+            "utilities"
+          ]
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "usbank_shopper_cash",
+      "issuer": "U.S. Bank",
+      "name": "U.S. Bank Shopper Cash Rewards",
+      "short": "Shopper Cash",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#2b3f8c",
+      "base": 1.5,
+      "annualFee": 95,
+      "foreignFee": 3
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "discover_it_student",
+      "issuer": "Discover",
+      "name": "Discover it Student Cash Back",
+      "short": "Discover Student",
+      "network": "discover",
+      "currency": "cash",
+      "color": "#ff7a1a",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0,
+      "rotating": {
+        "activationRequired": true,
+        "cap": {
+          "amount": 1500,
+          "period": "quarter"
+        },
+        "quarters": {
+          "2026-Q4": {
+            "cats": [
+              "dining",
+              "entertainment",
+              "utilities"
+            ],
+            "rate": 5
+          }
+        }
+      }
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "gas",
+            "dining"
+          ],
+          "rate": 2,
+          "cap": {
+            "amount": 1000,
+            "period": "quarter"
+          }
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "discover_it_secured",
+      "issuer": "Discover",
+      "name": "Discover it Secured",
+      "short": "Discover Secured",
+      "network": "discover",
+      "currency": "cash",
+      "color": "#f08a3c",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:jetblue"
+          ],
+          "rate": 3
+        },
+        {
+          "cats": [
+            "dining",
+            "groceries"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "jetblue_card",
+      "issuer": "Barclays",
+      "name": "JetBlue Card (no annual fee)",
+      "short": "JetBlue",
+      "network": "mastercard",
+      "currency": "jetblue",
+      "color": "#1a4f9c",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:wyndham",
+            "gas",
+            "ev_charging"
+          ],
+          "rate": 5
+        },
+        {
+          "cats": [
+            "dining",
+            "groceries"
+          ],
+          "rate": 2
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "wyndham_earner",
+      "issuer": "Barclays",
+      "name": "Wyndham Rewards Earner Card",
+      "short": "Wyndham",
+      "network": "visa",
+      "currency": "wyndham",
+      "color": "#004b8d",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "amazon"
+          ],
+          "rate": 5,
+          "label": "With Prime"
+        }
+      ],
+      "benefits": [
+        {
+          "text": "Only works at Amazon"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "amazon_store_card",
+      "issuer": "Synchrony",
+      "name": "Amazon Store Card",
+      "short": "Amazon Store",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#ff9900",
+      "base": 0,
+      "annualFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:lowes"
+          ],
+          "rate": 5,
+          "label": "5% off at Lowe's"
+        }
+      ],
+      "benefits": [
+        {
+          "text": "Only works at Lowe's"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "lowes_advantage",
+      "issuer": "Synchrony",
+      "name": "Lowe's Advantage Card",
+      "short": "Lowe's Card",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#004990",
+      "base": 0,
+      "annualFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "m:tj_maxx_marshalls_homegoods"
+          ],
+          "rate": 5,
+          "label": "TJ Maxx, Marshalls, HomeGoods, Sierra"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "tjx_rewards",
+      "issuer": "Synchrony",
+      "name": "TJX Rewards Credit Card",
+      "short": "TJX Card",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#b5121b",
+      "base": 1,
+      "annualFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "walmart"
+          ],
+          "rate": 3,
+          "label": "3% at Walmart (5% with Walmart+, edit to match)"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "onepay_cashrewards",
+      "issuer": "Synchrony (OnePay)",
+      "name": "OnePay CashRewards Card (Walmart)",
+      "short": "OnePay",
+      "network": "mastercard",
+      "currency": "onepay",
+      "color": "#0071ce",
+      "base": 1.5,
+      "annualFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "rent"
+          ],
+          "rate": 1.25,
+          "label": "Rent / mortgage via Bilt (up to 1.25x)"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "bilt_blue",
+      "issuer": "Bilt (Cardless)",
+      "name": "Bilt Blue Card",
+      "short": "Bilt Blue",
+      "network": "mastercard",
+      "currency": "bilt",
+      "color": "#2c5aa0",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "dining"
+          ],
+          "rate": 3,
+          "label": "Your yearly pick: dining or groceries (groceries capped at $25k/yr)",
+          "choiceOptions": [
+            "dining",
+            "groceries"
+          ]
+        },
+        {
+          "cats": [
+            "@travel"
+          ],
+          "rate": 2
+        },
+        {
+          "cats": [
+            "rent"
+          ],
+          "rate": 1.25,
+          "label": "Rent / mortgage via Bilt (up to 1.25x)"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "bilt_obsidian",
+      "issuer": "Bilt (Cardless)",
+      "name": "Bilt Obsidian Card",
+      "short": "Bilt Obsidian",
+      "network": "mastercard",
+      "currency": "bilt",
+      "color": "#1b1b1f",
+      "base": 1,
+      "annualFee": 95,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "rent"
+          ],
+          "rate": 1.25,
+          "label": "Rent / mortgage via Bilt (up to 1.25x)"
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "bilt_palladium",
+      "issuer": "Bilt (Cardless)",
+      "name": "Bilt Palladium Card",
+      "short": "Bilt Palladium",
+      "network": "mastercard",
+      "currency": "bilt",
+      "color": "#8c8f96",
+      "base": 2,
+      "annualFee": 495,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "dining"
+          ],
+          "rate": 5,
+          "cap": {
+            "amount": 50000,
+            "period": "year"
+          }
+        }
+      ],
+      "benefits": [
+        {
+          "text": "10% on hotels and 5% on flights booked through Robinhood travel",
+          "cats": [
+            "hotels",
+            "airfare"
+          ]
+        },
+        {
+          "text": "Up to $250/yr dining credit at participating restaurants; DashPass included",
+          "cats": [
+            "dining",
+            "m:doordash"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "robinhood_platinum",
+      "issuer": "Robinhood",
+      "name": "Robinhood Platinum Card",
+      "short": "Robinhood Plat",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#5b5b5b",
+      "base": 1,
+      "annualFee": 695,
+      "foreignFee": 0,
+      "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "nfcu_cashrewards",
+      "issuer": "Navy Federal",
+      "name": "Navy Federal cashRewards Plus",
+      "short": "NFCU cashRewards+",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#14325c",
+      "base": 2,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "@travel"
+          ],
+          "rate": 3
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "nfcu_flagship",
+      "issuer": "Navy Federal",
+      "name": "Navy Federal Visa Signature Flagship Rewards",
+      "short": "NFCU Flagship",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#0e2140",
+      "base": 2,
+      "annualFee": 49,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "gas",
+            "ev_charging"
+          ],
+          "rate": 5
+        },
+        {
+          "cats": [
+            "groceries",
+            "dining",
+            "streaming",
+            "utilities"
+          ],
+          "rate": 3
+        }
+      ],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "penfed_platinum_rewards",
+      "issuer": "PenFed",
+      "name": "PenFed Platinum Rewards Visa Signature",
+      "short": "PenFed Platinum",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#1f3f73",
+      "base": 1,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "2% with PenFed Honors Advantage membership (edit the base rate if you have it)"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "penfed_power_cash",
+      "issuer": "PenFed",
+      "name": "PenFed Power Cash Rewards Visa Signature",
+      "short": "PenFed Power Cash",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#2f5a9e",
+      "base": 1.5,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "usaa_preferred_cash",
+      "issuer": "USAA",
+      "name": "USAA Preferred Cash Rewards",
+      "short": "USAA Cash",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#003b5c",
+      "base": 1.5,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [
+        {
+          "text": "2% when redeemed into a SoFi account"
+        }
+      ],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "sofi_everyday_cash",
+      "issuer": "SoFi",
+      "name": "SoFi Everyday Cash Rewards",
+      "short": "SoFi Cash",
+      "network": "mastercard",
+      "currency": "cash",
+      "color": "#00a2c7",
+      "base": 2,
+      "annualFee": 0,
+      "foreignFee": 0
+    },
+    {
+      "type": "credit",
+      "rules": [],
+      "benefits": [],
+      "changelog": [],
+      "version": "2026-10-28",
+      "presetId": "upgrade_cash_rewards",
+      "issuer": "Upgrade",
+      "name": "Upgrade Cash Rewards Visa",
+      "short": "Upgrade",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#2f9e6b",
+      "base": 1.5,
+      "annualFee": 0,
+      "foreignFee": 0
     }
   ]
 }

@@ -33,6 +33,7 @@ export const CATEGORIES = [
   // Merchant-specific categories that only a few cards reward. Hidden from tiles.
   { id: 'costco', label: 'Costco (store)', icon: '🧺', hidden: true },
   { id: 'whole_foods', label: 'Whole Foods', icon: '🥦', hidden: true },
+  { id: 'rent', label: 'Rent / mortgage', icon: '🏠', hidden: true },
 ];
 
 export const CATEGORY_BY_ID = Object.fromEntries(CATEGORIES.map((c) => [c.id, c]));
@@ -119,6 +120,13 @@ const MERCHANT_LIST = [
   { name: 'Alaska Airlines', match: /alaska\s*air/i, cats: ['airfare'] },
   { name: 'Best Buy', match: /best\s*buy/i, cats: ['electronics'] },
   { name: 'Apple Store', match: /^apple(\s*store)?$/i, cats: ['electronics'] },
+  { name: 'TJ Maxx / Marshalls / HomeGoods', match: /t\.?j\.?\s*maxx|marshalls|homegoods|sierra trading/i, cats: ['department'] },
+  { name: 'Disney Parks & Stores', match: /walt disney world|disneyland|disney store|disney springs/i, cats: ['entertainment'] },
+  { name: 'Air Canada', match: /air\s*canada/i, cats: ['airfare'] },
+  { name: 'British Airways', match: /british\s*airways|aer lingus|iberia/i, cats: ['airfare'] },
+  { name: 'Hawaiian Airlines', match: /hawaiian\s*air/i, cats: ['airfare'] },
+  { name: 'Wyndham', match: /wyndham|days inn|super 8|la quinta|ramada|microtel|baymont|howard johnson/i, cats: ['hotels'] },
+  { name: 'Rent via Bilt', match: /^rent$|^bilt\b|rent payment|mortgage payment/i, cats: ['rent'] },
   { name: 'Chase Travel portal', match: /chase\s*travel/i, cats: ['travel_other', 'hotels', 'airfare', 'car_rental'] },
   { name: 'Capital One Travel portal', match: /capital\s*one\s*travel/i, cats: ['travel_other', 'hotels', 'airfare', 'car_rental'] },
   { name: 'Amex Travel portal', match: /amex\s*travel|american\s*express\s*travel/i, cats: ['travel_other', 'hotels', 'airfare'] },
