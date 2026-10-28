@@ -14,7 +14,7 @@ Other features:
 - **143 credit and debit cards** from 25+ issuers. Pick by issuer, search, or filter to debit cards (PayPal, Cash App, Venmo, Discover). You can also add any card yourself.
 - Spending caps per month/quarter/year, "pick your category" cards, and store payment rules (Costco only takes Visa in store).
 - **Automatic updates.** Card terms and rotating categories update by themselves, with a "what changed" notice and Undo.
-- **Accounts (optional).** Sign in to sync your cards across devices and get email updates. This needs a one-time setup: see [SETUP-ACCOUNTS.md](SETUP-ACCOUNTS.md).
+- **Accounts (optional).** Sign in to sync your cards across devices and get email updates.
 - Works offline except the store lookup. Without an account, everything stays on your device; use Export/Import in Settings for backups.
 
 ## Install on your phone
@@ -52,7 +52,7 @@ About widgets: a web app can't add a real home-screen widget. On Android, the la
 
   It also verifies cards still marked "terms not yet verified". It publishes only if the data checks (`npm test`) pass.
 - Cards you've edited yourself are never overwritten; you get "Use the update / Keep mine" instead.
-- When accounts are set up, subscribers get emails about these changes ([details](SETUP-ACCOUNTS.md)).
+- If you have an account and turned on email updates, you get an email about these changes.
 
 ## Support & contact
 

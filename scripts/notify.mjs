@@ -28,7 +28,7 @@ if (!events.length) process.exit(0);
 
 const { FIREBASE_SERVICE_ACCOUNT, GMAIL_USER, GMAIL_APP_PASSWORD } = process.env;
 if (!FIREBASE_SERVICE_ACCOUNT || !GMAIL_USER || !GMAIL_APP_PASSWORD) {
-  console.log('Email secrets are not set — dry run only. See SETUP-ACCOUNTS.md.');
+  console.log('Email secrets are not set — dry run only. Set the FIREBASE_SERVICE_ACCOUNT, GMAIL_USER and GMAIL_APP_PASSWORD repository secrets to send.');
   const sample = buildEmail(events, { presetIds: [], prefs: { emailAll: true } }, appUrl);
   console.log(`\n--- Sample "all card news" email ---\nSubject: ${sample.subject}\n\n${sample.text}`);
   process.exit(0);
