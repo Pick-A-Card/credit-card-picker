@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-28",
+  "updated": "2026-11-16",
   "currencies": {
     "cash": {
       "name": "Cash back",
@@ -505,10 +505,11 @@
           ]
         },
         {
-          "text": "Complimentary DashPass (activate with DoorDash)",
+          "text": "Complimentary DashPass plus a $15/month DoorDash credit on any eligible order (from Oct 1, 2026)",
           "cats": [
             "m:doordash",
-            "dining"
+            "dining",
+            "groceries"
           ]
         },
         {
@@ -525,7 +526,7 @@
           ]
         }
       ],
-      "version": "2026-10-16",
+      "version": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-13",
@@ -534,13 +535,17 @@
         {
           "date": "2026-10-16",
           "text": "Added the 2026 hotel credits: The Edit (up to $250 per stay, $500/yr) and a one-time $250 Chase Travel hotel credit."
+        },
+        {
+          "date": "2026-11-16",
+          "text": "DoorDash perk upgraded on Oct 1, 2026: a $15/month DoorDash credit usable on any eligible order (was $5, restaurants only), plus DashPass."
         }
       ],
       "issuer": "Chase",
       "type": "credit",
       "annualFee": 795,
       "foreignFee": 0,
-      "verified": "2026-10-13"
+      "verified": "2026-11-16"
     },
     {
       "presetId": "amex_gold",
@@ -610,9 +615,21 @@
           "cats": [
             "car_rental"
           ]
+        },
+        {
+          "text": "Up to $100/yr Resy credit ($50 twice a year, enrollment required)",
+          "cats": [
+            "dining"
+          ]
+        },
+        {
+          "text": "Up to $7/month Dunkin' credit (U.S. Dunkin', enrollment required)",
+          "cats": [
+            "dining"
+          ]
         }
       ],
-      "version": "2026-10-13",
+      "version": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-13",
@@ -623,7 +640,7 @@
       "type": "credit",
       "annualFee": 325,
       "foreignFee": 0,
-      "verified": "2026-10-13"
+      "verified": "2026-11-16"
     },
     {
       "presetId": "amex_bcp",
@@ -730,15 +747,21 @@
           "cats": [
             "car_rental"
           ]
+        },
+        {
+          "text": "Up to $7/month Disney streaming credit (Disney+, Hulu, ESPN+; enrollment required)",
+          "cats": [
+            "streaming"
+          ]
         }
       ],
-      "version": "2026-10-01",
+      "version": "2026-11-16",
       "changelog": [],
       "issuer": "American Express",
       "type": "credit",
       "annualFee": 0,
       "foreignFee": 2.7,
-      "verified": "2026-10-16"
+      "verified": "2026-11-16"
     },
     {
       "presetId": "citi_double_cash",
@@ -749,14 +772,22 @@
       "color": "#056dae",
       "base": 2,
       "rules": [],
-      "benefits": [],
-      "version": "2026-10-01",
+      "benefits": [
+        {
+          "text": "5% on hotels, car rentals and attractions booked through Citi Travel",
+          "cats": [
+            "hotels",
+            "car_rental"
+          ]
+        }
+      ],
+      "version": "2026-11-16",
       "changelog": [],
       "issuer": "Citi",
       "type": "credit",
       "annualFee": 0,
       "foreignFee": 3,
-      "verified": "2026-10-16"
+      "verified": "2026-11-16"
     },
     {
       "presetId": "citi_custom_cash",
@@ -792,8 +823,16 @@
           ]
         }
       ],
-      "benefits": [],
-      "version": "2026-10-16",
+      "benefits": [
+        {
+          "text": "5% on hotels, car rentals and attractions booked through Citi Travel",
+          "cats": [
+            "hotels",
+            "car_rental"
+          ]
+        }
+      ],
+      "version": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-16",
@@ -805,7 +844,7 @@
       "annualFee": 0,
       "foreignFee": 3,
       "discontinued": "2026-05-28",
-      "verified": "2026-10-16"
+      "verified": "2026-11-16"
     },
     {
       "presetId": "savor",
@@ -1415,11 +1454,18 @@
             "rideshare"
           ],
           "rate": 2
+        },
+        {
+          "cats": [
+            "m:chase_travel_portal"
+          ],
+          "rate": 3,
+          "label": "Booked through Chase Travel"
         }
       ],
       "benefits": [],
       "changelog": [],
-      "version": "2026-10-13",
+      "version": "2026-11-16",
       "presetId": "amazon_visa",
       "issuer": "Chase",
       "name": "Amazon Visa (no Prime)",
@@ -1430,7 +1476,7 @@
       "base": 1,
       "annualFee": 0,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -1717,10 +1763,16 @@
           "cats": [
             "m:marriott"
           ]
+        },
+        {
+          "text": "Up to $50 airline credit each half-year after $250+ in airline purchases (through June 30, 2027)",
+          "cats": [
+            "airfare"
+          ]
         }
       ],
       "changelog": [],
-      "version": "2026-10-13",
+      "version": "2026-11-16",
       "presetId": "marriott_boundless",
       "issuer": "Chase",
       "name": "Marriott Bonvoy Boundless",
@@ -1731,7 +1783,7 @@
       "base": 2,
       "annualFee": 95,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -1865,7 +1917,7 @@
           ]
         },
         {
-          "text": "Up to $300 twice a year on prepaid Fine Hotels + Resorts / The Hotel Collection stays",
+          "text": "Up to $300 twice a year Lodging Credit on prepaid Fine Hotels + Resorts, The Hotel Collection or Airbnb Luxe stays via Amex Travel (FHR stays need 2+ nights from Jan 1, 2027)",
           "cats": [
             "hotels",
             "m:amex_travel_portal"
@@ -1882,10 +1934,21 @@
           "cats": [
             "dining"
           ]
+        },
+        {
+          "text": "Up to $250/yr Airbnb Experiences credit after a prepaid Airbnb Luxe booking via Amex Travel",
+          "cats": [
+            "travel_other"
+          ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-16",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "The $300 semi-annual hotel credit is now a Lodging Credit that also covers Airbnb Luxe; Fine Hotels + Resorts stays need 2 nights from Jan 1, 2027. New Airbnb Experiences credit."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "amex_platinum",
       "issuer": "American Express",
       "name": "Amex Platinum",
@@ -1896,7 +1959,7 @@
       "base": 1,
       "annualFee": 895,
       "foreignFee": 0,
-      "verified": "2026-10-16"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -1934,8 +1997,13 @@
       "type": "credit",
       "rules": [],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "No longer open to new applicants (closed Sept 2024). Existing cards keep earning 1.5%."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "amex_cash_magnet",
       "issuer": "American Express",
       "name": "Amex Cash Magnet",
@@ -1946,7 +2014,8 @@
       "base": 1.5,
       "annualFee": 0,
       "foreignFee": 2.7,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16",
+      "discontinued": "2024-09-25"
     },
     {
       "type": "credit",
@@ -2299,14 +2368,27 @@
       ],
       "benefits": [
         {
-          "text": "Free first checked bag on Delta",
+          "text": "Free first and second checked bags on Delta-operated domestic flights",
           "cats": [
             "m:delta"
           ]
+        },
+        {
+          "text": "Up to $10/month rideshare credit (U.S. Uber, Lyft, Curb, Alto; enrollment required)",
+          "cats": [
+            "rideshare",
+            "m:lyft",
+            "m:uber"
+          ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Since June 4, 2026: a second free checked bag on Delta, and up to $120/yr ($10/month) in U.S. rideshare credits (enrollment required)."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "delta_gold",
       "issuer": "American Express",
       "name": "Delta SkyMiles Gold American Express",
@@ -2317,7 +2399,7 @@
       "base": 1,
       "annualFee": 150,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -2345,14 +2427,19 @@
       ],
       "benefits": [
         {
-          "text": "Free first checked bag on Delta",
+          "text": "Free first and second checked bags on Delta-operated domestic flights",
           "cats": [
             "m:delta"
           ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Since June 4, 2026: a second free checked bag on Delta-operated domestic flights."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "delta_platinum",
       "issuer": "American Express",
       "name": "Delta SkyMiles Platinum American Express",
@@ -2363,7 +2450,7 @@
       "base": 1,
       "annualFee": 350,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -2381,10 +2468,21 @@
           "cats": [
             "m:delta"
           ]
+        },
+        {
+          "text": "Free first and second checked bags on Delta-operated domestic flights",
+          "cats": [
+            "m:delta"
+          ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Since June 4, 2026: free first and second checked bags on Delta-operated domestic flights."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "delta_reserve",
       "issuer": "American Express",
       "name": "Delta SkyMiles Reserve American Express",
@@ -2395,7 +2493,7 @@
       "base": 1,
       "annualFee": 650,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -2487,8 +2585,13 @@
           ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-13",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Card refreshed Oct 27, 2026: the annual fee rises from $99 to $150 (existing cardholders pay it at their first renewal after Jan 24, 2027)."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "aa_platinum_select",
       "issuer": "Citi",
       "name": "Citi AAdvantage Platinum Select",
@@ -2497,9 +2600,9 @@
       "currency": "aa",
       "color": "#0078d2",
       "base": 1,
-      "annualFee": 99,
+      "annualFee": 150,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -2647,9 +2750,22 @@
           "rate": 2
         }
       ],
-      "benefits": [],
+      "benefits": [
+        {
+          "text": "Up to $100/yr airline incidental credit (bag fees, seat upgrades, lounges)",
+          "cats": [
+            "airfare"
+          ]
+        },
+        {
+          "text": "Up to $100 TSA PreCheck / Global Entry credit every 4 years",
+          "cats": [
+            "travel_other"
+          ]
+        }
+      ],
       "changelog": [],
-      "version": "2026-10-13",
+      "version": "2026-11-16",
       "presetId": "bofa_premium",
       "issuer": "Bank of America",
       "name": "BofA Premium Rewards",
@@ -2660,7 +2776,7 @@
       "base": 1.5,
       "annualFee": 95,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -2770,7 +2886,7 @@
       ],
       "benefits": [],
       "changelog": [],
-      "version": "2026-10-13",
+      "version": "2026-11-16",
       "presetId": "discover_chrome",
       "issuer": "Discover",
       "name": "Discover it Chrome",
@@ -2780,7 +2896,8 @@
       "color": "#d65a00",
       "base": 1,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 0,
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -2962,15 +3079,26 @@
         },
         {
           "text": "Approved before Sept 24, 2026? You earn 3% on your top category and 2% on your second instead. Edit the card to match."
+        },
+        {
+          "text": "Extra 1% (4% total) on dining/entertainment purchases you split in Venmo when friends pay you back within 30 days",
+          "cats": [
+            "dining",
+            "entertainment"
+          ]
         }
       ],
       "changelog": [
         {
           "date": "2026-10-28",
           "text": "New rewards for cards approved since Sept 24, 2026: 3% on dining and entertainment, 3% when you pay with Venmo, 1% on everything else."
+        },
+        {
+          "date": "2026-11-16",
+          "text": "New: an extra 1% (4% total) on dining and entertainment purchases you split in Venmo when friends pay you back within 30 days."
         }
       ],
-      "version": "2026-10-28.1",
+      "version": "2026-11-16",
       "presetId": "venmo_credit",
       "issuer": "Synchrony (Venmo)",
       "name": "Venmo Credit Card",
@@ -2981,7 +3109,7 @@
       "base": 1,
       "annualFee": 0,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -3531,25 +3659,36 @@
           "label": "Through Dec 31, 2026"
         }
       ],
-      "benefits": [],
+      "benefits": [
+        {
+          "text": "Automatic IHG Silver Elite status and 5 Elite Night Credits each year",
+          "cats": [
+            "m:ihg"
+          ]
+        }
+      ],
       "changelog": [
         {
           "date": "2026-10-28",
           "text": "IHG card refresh (Oct 2026): 3x on dining, groceries and gas. Utilities and streaming stay 3x only through Dec 31, 2026."
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Renamed the IHG One Rewards Credit Card in the Oct 2026 refresh. Adds automatic Silver Elite status and 5 Elite Night Credits a year."
         }
       ],
-      "version": "2026-10-28.1",
+      "version": "2026-11-16",
       "presetId": "ihg_traveler",
       "issuer": "Chase",
-      "name": "IHG One Rewards Traveler",
-      "short": "IHG Traveler",
+      "name": "IHG One Rewards Credit Card",
+      "short": "IHG Card",
       "network": "mastercard",
       "currency": "ihg",
       "color": "#2b7a5f",
       "base": 2,
       "annualFee": 0,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -3579,14 +3718,27 @@
           "rate": 2
         }
       ],
-      "benefits": [],
+      "benefits": [
+        {
+          "text": "Automatic Aeroplan 25K status each year",
+          "cats": [
+            "m:air_canada"
+          ]
+        },
+        {
+          "text": "15% off eligible Aeroplan award bookings",
+          "cats": [
+            "m:air_canada"
+          ]
+        }
+      ],
       "changelog": [
         {
           "date": "2026-10-28",
           "text": "Card refreshed in Sept 2026: renamed, annual fee now $195, 3x on Air Canada and travel, 2x on gas. Dining and groceries stay 3x through Dec 31, 2026, then 2x."
         }
       ],
-      "version": "2026-10-28.1",
+      "version": "2026-11-16",
       "presetId": "aeroplan_card",
       "issuer": "Chase",
       "name": "Chase Air Canada Aeroplan Card",
@@ -3597,7 +3749,7 @@
       "base": 1,
       "annualFee": 195,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -3834,15 +3986,22 @@
           "cats": [
             "airfare"
           ]
+        },
+        {
+          "text": "Complimentary ZO by Tishman Speyer membership (ZO Clubhouse access)"
         }
       ],
       "changelog": [
         {
           "date": "2026-10-28",
           "text": "Corrected: 5x applies only to flights and prepaid hotels booked through Amex Travel (not all airfare). Annual fee is $895."
+        },
+        {
+          "date": "2026-11-16",
+          "text": "New Oct 22, 2026: complimentary ZO by Tishman Speyer membership (ZO Clubhouse access)."
         }
       ],
-      "version": "2026-10-28.1",
+      "version": "2026-11-16",
       "presetId": "amex_business_platinum",
       "issuer": "American Express",
       "name": "Amex Business Platinum",
@@ -3853,7 +4012,7 @@
       "base": 1,
       "annualFee": 895,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -4092,7 +4251,12 @@
             "gas",
             "utilities"
           ],
-          "rate": 2
+          "rate": 2,
+          "label": "2% on your top 3 eligible categories outside Amazon each billing cycle (set to match your spending)",
+          "cap": {
+            "amount": 150000,
+            "period": "year"
+          }
         }
       ],
       "benefits": [
@@ -4101,7 +4265,7 @@
         }
       ],
       "changelog": [],
-      "version": "2026-10-28.1",
+      "version": "2026-11-16",
       "presetId": "prime_business_usbank",
       "issuer": "U.S. Bank",
       "name": "Prime Business Card",
@@ -4112,7 +4276,7 @@
       "base": 1,
       "annualFee": 0,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -4225,18 +4389,36 @@
           "cats": [
             "m:american_airlines"
           ]
+        },
+        {
+          "text": "Up to $15/month Lyft credit after 3 eligible rides in a month",
+          "cats": [
+            "m:lyft",
+            "rideshare"
+          ]
+        },
+        {
+          "text": "12x on hotels and car rentals booked through AAdvantage Hotels / AAdvantage Cars",
+          "cats": [
+            "hotels",
+            "car_rental"
+          ]
         }
       ],
       "changelog": [
         {
           "date": "2026-10-28",
           "text": "Annual fee rose from $595 to $695 on Aug 23, 2026."
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Now called the Citi / AAdvantage Executive World Legend Mastercard. Lyft credit raised to $15/month, and hotels and cars booked through AAdvantage Hotels/Cars earn 12x."
         }
       ],
-      "version": "2026-10-28.1",
+      "version": "2026-11-16",
       "presetId": "aa_executive",
       "issuer": "Citi",
-      "name": "Citi AAdvantage Executive",
+      "name": "Citi / AAdvantage Executive World Legend Mastercard",
       "short": "AA Executive",
       "network": "mastercard",
       "currency": "aa",
@@ -4244,7 +4426,7 @@
       "base": 1,
       "annualFee": 695,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -4306,8 +4488,13 @@
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Closed to new applicants in April 2026 and replaced by the Capital One Venture Business. Existing cards keep their terms."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "spark_miles",
       "issuer": "Capital One",
       "name": "Capital One Spark Miles",
@@ -4318,7 +4505,8 @@
       "base": 2,
       "annualFee": 95,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16",
+      "discontinued": "2026-04-14"
     },
     {
       "type": "credit",
@@ -4599,8 +4787,13 @@
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28.1",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Closed to new applicants on June 22, 2026. Existing cards keep their terms."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "usbank_shopper_cash",
       "issuer": "U.S. Bank",
       "name": "U.S. Bank Shopper Cash Rewards",
@@ -4611,7 +4804,8 @@
       "base": 1.5,
       "annualFee": 95,
       "foreignFee": 3,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16",
+      "discontinued": "2026-06-22"
     },
     {
       "type": "credit",
@@ -4664,8 +4858,13 @@
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Closed to new applicants on June 2, 2026. Capital One now offers a new Discover it Secured Cash Back card instead."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "discover_it_secured",
       "issuer": "Discover",
       "name": "Discover it Secured",
@@ -4676,7 +4875,8 @@
       "base": 1,
       "annualFee": 0,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16",
+      "discontinued": "2026-06-02"
     },
     {
       "type": "credit",
@@ -5025,8 +5225,13 @@
         }
       ],
       "benefits": [],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Closed to new applicants on Sept 10, 2026 (replaced by the Flagship Premier). The annual fee rose from $49 to $95 on Nov 2, 2026; you can upgrade to Flagship Premier without a credit check."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "nfcu_flagship",
       "issuer": "Navy Federal",
       "name": "Navy Federal Visa Signature Flagship Rewards",
@@ -5035,9 +5240,10 @@
       "currency": "cash",
       "color": "#0e2140",
       "base": 2,
-      "annualFee": 49,
+      "annualFee": 95,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16",
+      "discontinued": "2026-09-10"
     },
     {
       "type": "credit",
@@ -5140,7 +5346,7 @@
       "rules": [],
       "benefits": [],
       "changelog": [],
-      "version": "2026-10-28",
+      "version": "2026-11-16",
       "presetId": "upgrade_cash_rewards",
       "issuer": "Upgrade",
       "name": "Upgrade Cash Rewards Visa",
@@ -5150,7 +5356,8 @@
       "color": "#2f9e6b",
       "base": 1.5,
       "annualFee": 0,
-      "foreignFee": 0
+      "foreignFee": 3,
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -5259,7 +5466,7 @@
       ],
       "benefits": [
         {
-          "text": "Amex's Lowe's partnership is ending; Lowe's is moving cardholders to a Synchrony-issued replacement card"
+          "text": "Accounts moved to Synchrony on Apr 9, 2026 and became the MyLowe's Pro Rewards American Express Card"
         }
       ],
       "changelog": [
@@ -5268,7 +5475,7 @@
           "text": "American Express's Lowe's partnership is ending; the card is being replaced by a Synchrony-issued Lowe's card."
         }
       ],
-      "version": "2026-10-28",
+      "version": "2026-11-16",
       "presetId": "lowes_business_amex",
       "issuer": "American Express",
       "name": "Lowe's Business Rewards Card (Amex)",
@@ -5280,7 +5487,7 @@
       "annualFee": 0,
       "foreignFee": 2.7,
       "discontinued": "2026-04-01",
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -5323,7 +5530,8 @@
       "rules": [
         {
           "cats": [
-            "m:delta"
+            "m:delta",
+            "dining"
           ],
           "rate": 2
         }
@@ -5333,14 +5541,27 @@
           "text": "2x on shipping and select advertising (up to $50k each per year)"
         },
         {
-          "text": "Free first checked bag on Delta",
+          "text": "Free first and second checked bags on Delta-operated domestic flights",
           "cats": [
             "m:delta"
           ]
+        },
+        {
+          "text": "Up to $10/month rideshare credit (U.S. Uber, Lyft, Curb, Alto; enrollment required)",
+          "cats": [
+            "rideshare",
+            "m:lyft",
+            "m:uber"
+          ]
         }
       ],
-      "changelog": [],
-      "version": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "text": "Since June 4, 2026: a second free checked bag on Delta and up to $10/month in U.S. rideshare credits. Also corrected: restaurants earn 2x."
+        }
+      ],
+      "version": "2026-11-16",
       "presetId": "delta_gold_business",
       "issuer": "American Express",
       "name": "Delta SkyMiles Gold Business American Express",
@@ -5351,7 +5572,7 @@
       "base": 1,
       "annualFee": 150,
       "foreignFee": 0,
-      "verified": "2026-10-28"
+      "verified": "2026-11-16"
     },
     {
       "type": "credit",
@@ -5531,6 +5752,44 @@
       "annualFee": 0,
       "foreignFee": 0,
       "verified": "2026-10-28"
+    },
+    {
+      "type": "credit",
+      "rules": [
+        {
+          "cats": [
+            "@travel"
+          ],
+          "rate": 4
+        },
+        {
+          "cats": [
+            "dining"
+          ],
+          "rate": 3
+        }
+      ],
+      "benefits": [
+        {
+          "text": "Up to $120 TSA PreCheck / Global Entry credit every 4 years",
+          "cats": [
+            "travel_other"
+          ]
+        }
+      ],
+      "changelog": [],
+      "version": "2026-11-16",
+      "presetId": "nfcu_flagship_premier",
+      "issuer": "Navy Federal",
+      "name": "Navy Federal Flagship Premier Visa Signature",
+      "short": "NFCU Premier",
+      "network": "visa",
+      "currency": "cash",
+      "color": "#0e2140",
+      "base": 1,
+      "annualFee": 95,
+      "foreignFee": 0,
+      "verified": "2026-11-16"
     }
   ]
 }
